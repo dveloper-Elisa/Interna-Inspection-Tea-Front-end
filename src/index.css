@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image {
+  background-image: url("../public/muganzateajpg.jpg");
+  background-size: cover;
+}
+.image-login {
+  background-image: url("../public/muganzatea.webp");
+  background-size: cover;
+}
