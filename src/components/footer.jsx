@@ -41,8 +41,11 @@ function Footer() {
       {/* Horizontal rular */}
       <hr className="text-2px text-white mx-[2rem]" />
       <div className="flex py-5 justify-center text-yellow-300 text">
-        2023-2024 All right reserved to Muganza-Tea factory
+        2023-2024 All &copy; right reserved to Muganza-Tea factory
       </div>
+
+      {/* background Image */}
+      <div className="flex bg-img"></div>
     </div>
   );
 }

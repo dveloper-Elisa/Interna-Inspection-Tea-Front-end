@@ -1,4 +1,6 @@
+// import { Link } from "react-router-dom";
 import "../../src/index.css";
+import Button from "./button.jsx";
 
 const Login = () => {
   return (
@@ -19,16 +21,17 @@ const Login = () => {
               placeholder="Enter email"
               className="px-10 py-2 text-[20px] rounded-md"
             />
-
             <input
               type="password"
               placeholder="Enter passwor"
               className="px-10 py-2 text-[20px] rounded-md"
             />
 
-            <button className="bg-[#00a601] rounded-md py-2 border-[2px] border-[#00a601] hover:bg-white font-bold tracking-[2px] text-[1.3rem]">
-              Login
-            </button>
+            <Button
+              href="/login/dashboard"
+              text="Login"
+              customCss="text-center bg-[#166534] text-white tracking-[2px] font-bold text-[20px] hover:bg-[#fff] hover:border-[#166534] hover:text-black "
+            />
           </form>
         </div>
       </div>

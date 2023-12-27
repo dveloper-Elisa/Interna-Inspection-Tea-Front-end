@@ -6,7 +6,7 @@ const Home = () => {
       <div className="flex justify-between gap-20 items-center h-[90vh]  ">
         <div className="flex flex-col text-center max-w-[45rem]">
           <strong className="text-[#638541] text-[50px]">
-            Welcome to MUGANZA-KIVU Tea factory
+            Welcome to INTERNAL INSPECTION Platform
           </strong>
           <p className="text-[20px]">
             The overall advantages that organic Ceylon Tea offers to health,
@@ -52,6 +52,8 @@ const Home = () => {
       <div className="bg-image h-[80vh] text-right text-white text-[30px] font-extrabold">
         <p className="mr-4">Muganza-Tea plantation</p>
       </div>
+      {/* IMS */}
+      {/* IIP */}
 
       {/* last Division */}
       <div className="flex justify-between gap-20 items-center h-[90vh]  ">

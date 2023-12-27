@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "./button";
 
 function Navigation() {
   return (
@@ -8,24 +9,21 @@ function Navigation() {
           <div className="log flex items-center">
             <img src="./logo.png" alt="Logo here" className="max-w-24 " />
             <span className="text-[1.5rem] font-extrabold">
-              Muganza-Kivu Tea factory
+              INTERNAL INSPECTION platform
             </span>
           </div>
 
           <nav>
             <div className="flex items-center gap-[20px]">
-              <Link
-                to="login"
-                id="login"
-                className="border-[2px] px-[20px] py-[5px] rounded-lg hover:bg-[#166534]"
-              >
-                Login
-              </Link>
+              <Button href="/login" text="Login" />
               <Link
                 to="/"
                 className="hover:text-[#166534] hover:bg-white px-[20px] py-[5px] rounded-lg"
               >
                 Home
+              </Link>
+              <Link>
+                <strong>Use Name</strong>
               </Link>
             </div>
           </nav>
