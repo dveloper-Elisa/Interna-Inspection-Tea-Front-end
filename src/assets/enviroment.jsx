@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Farming = () => {
+const Environment = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleBtn = () => {
     setIsOpen(!isOpen);
@@ -14,7 +14,7 @@ const Farming = () => {
             onClick={toggleBtn}
             className="hover:cursor-pointer max-w-fit text-black"
           >
-            Igice cya 4: UBUHINZI ^
+            Igice cya 6: IBIDUKIKIJE ^
           </b>
         </span>
       </strong>
@@ -28,12 +28,10 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.1.1
+                    Ingenzi 6.1.1
                   </b>
                   <strong>
-                    Waba witaho kumenya ko ubwoko bw’ingemwe utera butanga
-                    umusaruro mu bwiza n’uburyohe kandi bushobora kwihanganira
-                    indwara n’ibyonyi? Ubimenya ute?
+                    Ese waba warahinze ahahoze ishyamba cyimeza nyuma 2014
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -65,12 +63,9 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.1.2
+                    Ingenzi 6.1.2
                   </b>
-                  <strong>
-                    Ese urubahiriza intera zisabwa hagati y’urugenwe n’urundi?
-                    Ingemwe uzitera kuri metero zingahe kuri zingahe?
-                  </strong>
+                  <strong>Ese waba uhinga mucyanya gikomye</strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
@@ -100,11 +95,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.2.2
+                    Ingenzi 6.2.2
                   </b>
                   <strong>
-                    Waba ufite gahunda yo gukata icyayi ugamije kongera
-                    umusaruro mu bwinshi no mu bwiza? Ese urayubahiriza?
+                    Ese waba ubungabunga ibiti cyimeza cyangwa gakondo mumurima
+                    wawe?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -135,12 +130,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Amahitamo 4.2.3
+                    Ingenzi 6.2.3
                   </b>
                   <strong>
-                    Waba ufite gahunda yo gusazura icyayi ugamije kongera
-                    umusaruro cyangwa yo gutera izindi ngemwe z’icyayi ahari
-                    umwanya (gap) mu murima? Ubikora ute?
+                    Ese waba waba ufite ahantu hateye ibyatsi cyimeza mw’isambu
+                    yawe?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -162,6 +156,7 @@ const Farming = () => {
                   id="iptor"
                   cols="3"
                   rows="3"
+                  placeholder="Aho bigaragara:………………………"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 ></textarea>
               </div>
@@ -169,10 +164,13 @@ const Farming = () => {
               {/* //////////////// */}
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
-                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                  {/* <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.3.1
-                  </b>
-                  <strong>Mukoresha imbuto zihinduwe (GMOs)</strong>
+                  </b> */}
+                  <strong>
+                    Ese waba utera ibiti (harimwo ubwoko gakongo) mw’isambu yawe
+                    buri mwaka?{" "}
+                  </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
@@ -193,6 +191,7 @@ const Farming = () => {
                   id="iptor"
                   cols="3"
                   rows="3"
+                  placeholder="Umubare w’ibiti biri mw’isambu ye:…………………"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 ></textarea>
               </div>
@@ -201,12 +200,10 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.4.4
+                    Ingenzi 6.2.5
                   </b>
                   <strong>
-                    Ujya uboresha ibishingwe ukavanamo ifumbire y’imoborera
-                    utera mu murima? Ubiboresha ute? Ubundi bwoko bw’inyongera
-                    musaruro ukoresha n’ubuhe?
+                    Waba ufite ibiti bitanga igicucu mumurima wawe ?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -228,7 +225,7 @@ const Farming = () => {
                   id="iptor"
                   cols="3"
                   rows="3"
-                  placeholder="Ubwoko bw’inyongeramusaruro akoresha: ………………………………………."
+                  placeholder="...……..%"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 ></textarea>
               </div>
@@ -237,11 +234,10 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.4.7
+                    Ingenzi 6.2.6
                   </b>
                   <strong>
-                    Waba wandika ingano y’ifumbire mvaruganda (NPK) ukoresha
-                    buri mwaka? Ukoresha ibiro bingahe ku mwaka?
+                    Waba utenya kongera ubuso buriho ibimera kamere?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -263,7 +259,7 @@ const Farming = () => {
                   id="iptor"
                   cols="3"
                   rows="3"
-                  placeholder="Ibiro bya NPK ku mwaka: …………….."
+                  placeholder=""
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 ></textarea>
               </div>
@@ -272,13 +268,10 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.5.2
+                    Ingenzi 6.3.1
                   </b>
                   <strong>
-                    Waba ugerageza kureba niba hari ibyomyi cyangwa
-                    udukoko/udusimba turya ibyomyi twaba turi mu murima wawe?
-                    Niba waratubonye, watubonye mu murima uwuhe? Italiki? Ni
-                    tusimba ki?
+                    Waba wita mumbibi zimigezi n’ibiyaga byegereye umurima wawe?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -309,11 +302,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.5.3
+                    Ingenzi 6.3.2
                   </b>
                   <strong>
-                    NI gute ushira mu bikorwa gahunda yo kurwanya indwara
-                    n’ibyonyi udakoresheje imiti mva ruganda?
+                    Ese waba usiga icanya gikomye « riparian zone » hagati y’aho
+                    ukorera imirimo y’ubuhinzi n’isoko y’amazi cyangwa imigezi ?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -335,7 +328,7 @@ const Farming = () => {
                   id="iptor"
                   cols="3"
                   rows="3"
-                  placeholder=""
+                  placeholder="Metero zimwo: …………m"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 ></textarea>
               </div>
@@ -344,12 +337,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.5.4
+                    Ingenzi 6.4.1
                   </b>
                   <strong>
-                    Waba warahuguwe kuri gahunda yo gukoresha uburyo
-                    bukomatanyije bwo kurwanya indwara n’ibyonyi mu buhinzi
-                    ukora?
+                    Ese waba ukora imirimo yo guhiga inyamaswa z’ishamba? Kuzihe
+                    mpamvu?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -371,7 +363,7 @@ const Farming = () => {
                   id="iptor"
                   cols="3"
                   rows="3"
-                  placeholder="Wahuguwe ryari? ............."
+                  placeholder=""
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 ></textarea>
               </div>
@@ -380,12 +372,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.5.7
+                    Ingenzi 6.4.2
                   </b>
                   <strong>
-                    Ese waba ushira mu bikorwa gahunda yo kubanya imiti
-                    mvaruganda ukoresha mw’isambu yawe buri mwaka? Inyandiko
-                    zabyo urazifite ?
+                    Hari inyamaswa y’ishamba (urugero nk’inkende) waba utunze mu
+                    rugo iwawe?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -416,11 +407,10 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.1
+                    Ingenzi 6.4.3
                   </b>
                   <strong>
-                    Ese waba utera imiti iri kurutonde rwimiti itemewe na
-                    mabwiraza y’ubuhinzi burambye cyangwa aya leta
+                    Hari ibiterwa byiganza nk’amarebe waba ufite mw’isambu yawe?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -451,12 +441,9 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.2
+                    Ingenzi 6.4.3
                   </b>
-                  <strong>
-                    Waba ufata ingamba kandi ugakurikiza amabwiriza y’ubwirinze
-                    yagenewe abatera imiti
-                  </strong>
+                  <strong>Nimba Bihari, ni ubuhe bwoko? Ubirwanya ute?</strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
@@ -477,7 +464,7 @@ const Farming = () => {
                   id="iptor"
                   cols="3"
                   rows="3"
-                  placeholder="Imiti akoresha:........."
+                  placeholder=""
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 ></textarea>
               </div>
@@ -486,11 +473,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.3
+                    Ingenzi 6.4.4
                   </b>
                   <strong>
-                    Waba warahugurwe kuburyo bwo gutera imiti no gukoresha
-                    ibikoresho by’ubwirinzi.
+                    Hari inyamaswa y’ishamba (urugero: inkende) ukeresha mu
+                    mirimo y’isambu yawe?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -521,10 +508,10 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.4
+                    Ingenzi 6.4.5
                   </b>
                   <strong>
-                    Waba ufite ubwiherero n’ubukarabiro bwabantu batere imiti.
+                    Ni ubuhe buryo ukoresha mu kurwanya isuri mw’isambu yawe?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -555,10 +542,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.5
+                    Ingenzi 6.4.6
                   </b>
                   <strong>
-                    Waba utera imiti ukubigenkwe namabwiriza. (MSDS)
+                    Waba ukoresha umuriro utwika ibishingwe cyangwa imyanda
+                    mw’isambu yawe?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -589,12 +577,9 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.6
+                    Ingenzi 6.4.6
                   </b>
-                  <strong>
-                    Hari ingamba wafashe kuburyo imiti utera itahumanya imigezi
-                    cyangwa undi mutungo kamere n’ibinyabuzima?
-                  </strong>
+                  <strong>Niba utwika, ni kuzihe mpamvu?</strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
@@ -624,10 +609,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.8
+                    Ingenzi 6.5.1
                   </b>
                   <strong>
-                    Waba ubika inyandiko zigendanye nkoreshwa ryimiti
+                    Hari isoko cyangwa umugezi w’amazi ukoresha mw’isambu yawe
+                    ku buryo bwihariye?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -658,11 +644,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.9
+                    Ingenzi 6.5.2
                   </b>
                   <strong>
-                    Ese uducupa/utubidons/utujerikani tuba twavuyemwo imiti
-                    udushira he? Udukoresha iki?
+                    Niba ayo mazi (umugezi/isoko) uyakoresha, ubifiteye
+                    uburenganzira (icyangombwa) ?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -693,11 +679,11 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.10
+                    Amahitamo 6.5.6
                   </b>
                   <strong>
-                    Waba ufite uburyo bwiza bwo kubika imiti namafumbire,
-                    bikoreshwa mubuhinzi
+                    Waba ufata amazi y’imvura noneho ukayakoresha mu bikorwa
+                    by’ubuhinzi ?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -728,12 +714,12 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.6.11-12
+                    Amahitamo 6.5.7
                   </b>
                   <strong>
-                    Ese waba ubika ibikoresho byifashishwa mugutera imiti?
-                    Utugaragariza inyandiko zigendana nububiko bwimiti
-                    (amatariki, ingano,.)
+                    Waba witabira ibikorwa bigamije kubungabunga imigezi
+                    n’ukurinda isuri ubutaka bikorerwa hamwe n’abaturage
+                    batuye/bahingira mu gace kamwe “watershed management”
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -764,11 +750,10 @@ const Farming = () => {
               <div className="flex flex-col">
                 <label htmlFor="iptor" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
-                    Ingenzi 4.7.1
+                    Ingenzi 6.6.2
                   </b>
                   <strong>
-                    Ukora iki kugira ngo uramire umusaruro wawe mu bwiza, mu
-                    bwinshi n’ubwiza n’ubudahangarwa?
+                    Waba ukoresha ibyanda yo muri toilet nk’ifumbire mu murima?
                   </strong>
                 </label>
                 <p className="flex gap-4 font-bold my-2">
@@ -794,6 +779,341 @@ const Farming = () => {
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 ></textarea>
               </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.6.3
+                  </b>
+                  <strong>
+                    Ese waba ufite uburyo wita kunyanda y’ amazi iboneka uri
+                    gutunganya umusaruro?
+                  </strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="ab" id="vry" />
+                    <label htmlFor="vry">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ab" id="vry" />
+                    <label htmlFor="vry">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ab" id="vry" />
+                    <label htmlFor="vry">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.7.1
+                  </b>
+                  <strong>
+                    Imyannda y’isambu yawe uyikusanyiriza he? Hanyuma ukafatira
+                    uwuhe mwanzuro?
+                  </strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="ac" id="vrb" />
+                    <label htmlFor="vrb">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ac" id="vrb" />
+                    <label htmlFor="vrb">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ac" id="vrb" />
+                    <label htmlFor="vrb">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.7.2
+                  </b>
+                  <strong>Waba utwika imyanda kw’isambu yawe?</strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="ad" id="vrc" />
+                    <label htmlFor="vrc">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ad" id="vrc" />
+                    <label htmlFor="vrc">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ad" id="vrc" />
+                    <label htmlFor="vrc">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.8.2
+                  </b>
+                  <strong>Waba ukoresha Rondereza mu guteka?</strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="ae" id="vrd" />
+                    <label htmlFor="vrd">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ae" id="vrd" />
+                    <label htmlFor="vrd">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ae" id="vrd" />
+                    <label htmlFor="vrd">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.8.2
+                  </b>
+                  <strong>Waba ukoresha gaz mu guteka?</strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="af" id="vre" />
+                    <label htmlFor="vre">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="af" id="vre" />
+                    <label htmlFor="vre">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="af" id="vre" />
+                    <label htmlFor="vre">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.8.2
+                  </b>
+                  <strong>Waba ukoresha Biogazi?</strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="ag" id="vrf" />
+                    <label htmlFor="vrf">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ag" id="vrf" />
+                    <label htmlFor="vrf">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ag" id="vrf" />
+                    <label htmlFor="vrf">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.8.2
+                  </b>
+                  <strong>Waba ukoresha imirasire y’izuba?</strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="ah" id="vrg" />
+                    <label htmlFor="vrg">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ah" id="vrg" />
+                    <label htmlFor="vrg">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ah" id="vrg" />
+                    <label htmlFor="vrg">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.9.1
+                  </b>
+                  <strong>
+                    Ese hari ico waba uzi kubijyanye n’imyuka ihumanya ikirere
+                    (Green House Gazes)?{" "}
+                  </strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="ai" id="vrh" />
+                    <label htmlFor="vrh">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ai" id="vrh" />
+                    <label htmlFor="vrh">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ai" id="vrh" />
+                    <label htmlFor="vrh">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.9.1
+                  </b>
+                  <strong>
+                    Ese wamenya iyo wohereza mu kirere ingana ite?
+                  </strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="aj" id="vri" />
+                    <label htmlFor="vri">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="aj" id="vri" />
+                    <label htmlFor="vri">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="aj" id="vri" />
+                    <label htmlFor="vri">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
+
+              {/* //////////////// */}
+              <div className="flex flex-col">
+                <label htmlFor="iptor" className="flex gap-2 items-center">
+                  <b className="border-[2px] border-[#166534] p-2 shadow-lg">
+                    Ingenzi 6.9.1
+                  </b>
+                  <strong>
+                    Ubuyobozi bw’itsinda bwaba bwaraguhaye ifishi igufasha
+                    kubara ingano y’imyuka ihumanya ikirere ituruka ku mirimo
+                    ukorera mw’isambu yawe?
+                  </strong>
+                </label>
+                <p className="flex gap-4 font-bold my-2">
+                  <span>
+                    <input type="radio" name="ak" id="vrj" />
+                    <label htmlFor="vrj">Yego</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ak" id="vrj" />
+                    <label htmlFor="vrj">Oya</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="ak" id="vrj" />
+                    <label htmlFor="vrj">Ntibikorwa</label>
+                  </span>
+                </p>
+                <textarea
+                  name=""
+                  id="iptor"
+                  cols="3"
+                  rows="3"
+                  placeholder=""
+                  className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+                ></textarea>
+              </div>
             </div>
           </div>
         </div>
@@ -802,4 +1122,4 @@ const Farming = () => {
   );
 };
 
-export default Farming;
+export default Environment;

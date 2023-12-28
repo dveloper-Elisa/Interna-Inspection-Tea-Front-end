@@ -11,7 +11,7 @@ const FarmingLure = () => {
         <span className="text-center text-[#166534] ">
           <b className="font-serif text-center border-b-[2px] my-4 shadow-lg">
             2) KUBAHIRIZA AMAHAME AGENGA UBUHINZI BURAMBYE
-          </b>{" "}
+          </b>
           <br></br>
           <b
             id="drop"

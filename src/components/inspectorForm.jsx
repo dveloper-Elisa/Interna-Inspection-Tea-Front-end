@@ -6,6 +6,10 @@ import GpsCoordinates from "../assets/dpsCoadinates";
 import HavestIn4years from "../assets/havestingp4y";
 import FarmingLure from "../assets/famingLures";
 import FarmOrigin from "../assets/farmOrigin";
+import Farming from "../assets/farmingInGeneral";
+import HealthSafety from "../assets/healthandsafety";
+import Environment from "../assets/enviroment";
+import Comfirm from "../assets/confirmation";
 
 import { useState } from "react";
 const InspectorForm = () => {
@@ -66,14 +70,13 @@ const InspectorForm = () => {
           <div className="flex flex-col">
             <div className="flex flex-col gap-4">
               <strong className="text-[25px]">
-                <span>
-                  1) AMAKURU RUSANGE K’UBUGENZUZI BW’IMBERE.{" "}
+                <span className="font-serif text-center border-b-[2px] my-4 shadow-lg hover:cursor-pointer text-[#166534]">
                   <b
                     id="drop"
                     onClick={toglerBtn}
                     className="hover:cursor-pointer max-w-fit"
                   >
-                    ^
+                    1) AMAKURU RUSANGE K’UBUGENZUZI BW’IMBERE.
                   </b>
                 </span>
               </strong>
@@ -227,6 +230,18 @@ const InspectorForm = () => {
             </div>
             <div className="flex">
               <FarmOrigin />
+            </div>
+            <div className="flex">
+              <Farming />
+            </div>
+            <div className="flex">
+              <HealthSafety />
+            </div>
+            <div className="flex">
+              <Environment />
+            </div>
+            <div className="flex">
+              <Comfirm />
             </div>
           </div>
           <Button
