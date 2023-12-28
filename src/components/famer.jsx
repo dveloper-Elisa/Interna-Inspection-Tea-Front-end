@@ -87,6 +87,18 @@ const Famer = () => {
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
+            {/* IZINA RYA COPERATIVE */}
+            <div className="flex flex-col">
+              <label htmlFor="COP">
+                <strong>Izina rya Koperative/Itsinda:</strong>
+              </label>
+
+              <input
+                type="text"
+                id="COP"
+                className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
+              />
+            </div>
             {/* UMUBARE WABANYAMURYANGO */}
 
             <div className="flex flex-col">
@@ -101,18 +113,7 @@ const Famer = () => {
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
-            {/* IZINA RYA COPERATIVE */}
-            <div className="flex flex-col">
-              <label htmlFor="COP">
-                <strong>Izina rya Koperative/Itsinda:</strong>
-              </label>
 
-              <input
-                type="text"
-                id="COP"
-                className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
-              />
-            </div>
             {/* IGIHE AYIMAZEMO */}
             <div className="flex flex-col">
               <label htmlFor="PRD">
@@ -144,14 +145,8 @@ const Famer = () => {
             {/* AHO ATUYE */}
             <div className="flex flex-col">
               <label htmlFor="RS">
-                <strong>Aho atuye:</strong>
+                <strong>Aho atuye</strong>
               </label>
-
-              <input
-                type="text"
-                id="RS"
-                className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
-              />
             </div>
             <div className="flex flex-col">
               <label htmlFor="DC">
