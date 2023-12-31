@@ -26,19 +26,20 @@ const Famer = () => {
             {/* IZINA RY'UMUGENZUZI */}
 
             <div className="flex flex-col">
-              <label htmlFor="iptor">
+              <label htmlFor="">
                 <strong>Izina rya nyirumurima:</strong>
               </label>
               <input
                 type="text"
-                id="iptor"
+                id=""
+                name="name"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
 
             {/* igitsina */}
             <div className="flex flex-col">
-              <label htmlFor="iptor">
+              <label htmlFor="">
                 <strong>Igitsina(hitamo):</strong>
               </label>
 
@@ -73,6 +74,7 @@ const Famer = () => {
               </label>
               <input
                 type="number"
+                name="phone"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -84,6 +86,7 @@ const Famer = () => {
               <input
                 type="text"
                 id="zone"
+                name="zone"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -96,6 +99,7 @@ const Famer = () => {
               <input
                 type="text"
                 id="COP"
+                name="cooperative"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -109,7 +113,7 @@ const Famer = () => {
               <input
                 type="number"
                 id="MB"
-                name="owner"
+                name="coop_member"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -123,6 +127,7 @@ const Famer = () => {
               <input
                 type="text"
                 id="PRD"
+                name="lifelong"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -137,7 +142,7 @@ const Famer = () => {
               <input
                 type="number"
                 id="id"
-                name="owner"
+                name="NID"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -156,6 +161,7 @@ const Famer = () => {
               <input
                 type="text"
                 id="DC"
+                name="district"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -167,6 +173,7 @@ const Famer = () => {
               <input
                 type="text"
                 id="ST"
+                name="sector"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -178,6 +185,7 @@ const Famer = () => {
               <input
                 type="text"
                 id="cell"
+                name="cell"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -189,6 +197,7 @@ const Famer = () => {
               <input
                 type="text"
                 id="vil"
+                name="village"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>

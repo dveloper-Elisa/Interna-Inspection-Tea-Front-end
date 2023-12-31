@@ -30,7 +30,7 @@ const FarmOrigin = () => {
               {/* Izina ry’ ukurikirana umurima:*/}
 
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 2.1.1
                   </b>
@@ -40,21 +40,21 @@ const FarmOrigin = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="a" id="ab" />
+                    <input type="radio" name="INharvestareachoose" id="ab" />
                     <label htmlFor="ab">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="a" id="bb" />
+                    <input type="radio" name="INharvestareachoose" id="bb" />
                     <label htmlFor="bb">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="a" id="cb" />
+                    <input type="radio" name="INharvestareachoose" id="cb" />
                     <label htmlFor="cb">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="INharvestareaproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Ubuso= …..ha Umusaruro = ………..kgs
@@ -66,7 +66,7 @@ const FarmOrigin = () => {
               {/* s/////////////// */}
 
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 2.1.3
                   </b>
@@ -78,21 +78,33 @@ const FarmOrigin = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="b" id="ac" />
+                    <input
+                      type="radio"
+                      name="INharvestmanagementchoose"
+                      id="ac"
+                    />
                     <label htmlFor="ac">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="b" id="bc" />
+                    <input
+                      type="radio"
+                      name="INharvestmanagementchoose"
+                      id="bc"
+                    />
                     <label htmlFor="bb">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="b" id="cc" />
+                    <input
+                      type="radio"
+                      name="INharvestmanagementchoose"
+                      id="cc"
+                    />
                     <label htmlFor="cc">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="INharvestmanagementproof"
+                  id=""
                   cols="3"
                   rows="3"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -101,7 +113,7 @@ const FarmOrigin = () => {
 
               {/* //////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 2.1.5
                   </b>
@@ -112,21 +124,33 @@ const FarmOrigin = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="c" id="ad" />
+                    <input
+                      type="radio"
+                      name="INharvestsaledocumentchoose"
+                      id="ad"
+                    />
                     <label htmlFor="ad">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="c" id="bd" />
+                    <input
+                      type="radio"
+                      name="INharvestsaledocumentchoose"
+                      id="bd"
+                    />
                     <label htmlFor="bd">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="c" id="cd" />
+                    <input
+                      type="radio"
+                      name="INharvestsaledocumentchoose"
+                      id="cd"
+                    />
                     <label htmlFor="cd">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="INharvestsaledocumentproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Resi /Receipt? ……Ifishi / Form? …..
@@ -137,7 +161,7 @@ const FarmOrigin = () => {
 
               {/* ////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 2.1.8
                   </b>
@@ -147,21 +171,21 @@ const FarmOrigin = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="d" id="ae" />
+                    <input type="radio" name="INdocumentkeepchoose" id="ae" />
                     <label htmlFor="ae">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="d" id="be" />
+                    <input type="radio" name="INdocumentkeepchoose" id="be" />
                     <label htmlFor="be">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="d" id="ce" />
+                    <input type="radio" name="INdocumentkeepchoose" id="ce" />
                     <label htmlFor="ce">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="INdocumentkeepproof"
+                  id=""
                   cols="3"
                   rows="3"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -170,7 +194,7 @@ const FarmOrigin = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 2.1.10
                   </b>
@@ -182,21 +206,21 @@ const FarmOrigin = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="e" id="af" />
+                    <input type="radio" name="INharvestscalechoose" id="af" />
                     <label htmlFor="af">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="e" id="bf" />
+                    <input type="radio" name="INharvestscalechoose" id="bf" />
                     <label htmlFor="bf">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="e" id="cf" />
+                    <input type="radio" name="INharvestscalechoose" id="cf" />
                     <label htmlFor="cf">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="INharvestscaleproof"
+                  id=""
                   cols="3"
                   rows="3"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -222,7 +246,7 @@ const FarmOrigin = () => {
         {isOpen2 && (
           <div className="flex flex-col items-center justify-center max-w-lg w-full">
             <div className="flex flex-col">
-              <label htmlFor="iptor" className="flex gap-2 items-center">
+              <label htmlFor="" className="flex gap-2 items-center">
                 <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                   Amahitamo 3.1.1
                 </b>
@@ -235,21 +259,21 @@ const FarmOrigin = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="i" id="ai" />
+                  <input type="radio" name="Ppatternerchoose" id="ai" />
                   <label htmlFor="ai">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="i" id="bi" />
+                  <input type="radio" name="Ppatternerchoose" id="bi" />
                   <label htmlFor="bi">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="i" id="ci" />
+                  <input type="radio" name="Ppatternerchoose" id="ci" />
                   <label htmlFor="ci">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
-                name=""
-                id="iptor"
+                name="Ppatternerproof"
+                id=""
                 cols="3"
                 rows="3"
                 placeholder="Igishoro kuri 1kg = ……….. Rwf Inyungu kuri 1kg = …………………"

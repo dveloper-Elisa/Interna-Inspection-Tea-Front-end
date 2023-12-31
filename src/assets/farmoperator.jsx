@@ -27,19 +27,20 @@ const FarmOperator = () => {
             {/* Izina ry’ ukurikirana umurima:*/}
 
             <div className="flex flex-col">
-              <label htmlFor="iptor">
+              <label htmlFor="op">
                 <strong>Izina ry’ ukurikirana umurima:</strong>
               </label>
               <input
                 type="text"
-                id="iptor"
+                id="op"
+                name="OPname"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
 
             {/* igitsina */}
             <div className="flex flex-col">
-              <label htmlFor="iptor">
+              <label htmlFor="">
                 <strong>Igitsina(hitamo):</strong>
               </label>
 
@@ -47,7 +48,7 @@ const FarmOperator = () => {
                 <input
                   type="radio"
                   id="sex"
-                  name="sex"
+                  name="OPsex"
                   className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 />
                 <label htmlFor="sex" className="pl-2">
@@ -58,7 +59,7 @@ const FarmOperator = () => {
                 <input
                   type="radio"
                   id="s"
-                  name="sex"
+                  name="OPsex"
                   className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                 />
                 <label htmlFor="s" className="pl-2">
@@ -74,6 +75,7 @@ const FarmOperator = () => {
               </label>
               <input
                 type="number"
+                name="OPphone"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -85,6 +87,7 @@ const FarmOperator = () => {
               <input
                 type="text"
                 id="zone"
+                name="OPzone"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -97,6 +100,7 @@ const FarmOperator = () => {
               <input
                 type="text"
                 id="COP"
+                name="OPcooperative"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -110,7 +114,7 @@ const FarmOperator = () => {
               <input
                 type="number"
                 id="MB"
-                name="owner"
+                name="OPcoop_member"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -124,6 +128,7 @@ const FarmOperator = () => {
               <input
                 type="text"
                 id="PRD"
+                name="OPlifelong"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -138,7 +143,7 @@ const FarmOperator = () => {
               <input
                 type="number"
                 id="id"
-                name="owner"
+                name="OPNID"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -157,6 +162,7 @@ const FarmOperator = () => {
               <input
                 type="text"
                 id="DC"
+                name="OPdistrict"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -168,6 +174,7 @@ const FarmOperator = () => {
               <input
                 type="text"
                 id="ST"
+                name="OPsector"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -179,6 +186,7 @@ const FarmOperator = () => {
               <input
                 type="text"
                 id="cell"
+                name="OPcell"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -190,6 +198,7 @@ const FarmOperator = () => {
               <input
                 type="text"
                 id="vil"
+                name="OPvillage"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>

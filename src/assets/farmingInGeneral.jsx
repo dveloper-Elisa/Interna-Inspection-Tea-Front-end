@@ -5,6 +5,7 @@ const Farming = () => {
   const toggleBtn = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <div className="flex flex-col gap-4">
       <strong className="text-[25px]">
@@ -26,7 +27,7 @@ const Farming = () => {
               {/* Izina ry’ ukurikirana umurima:*/}
 
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.1.1
                   </b>
@@ -38,21 +39,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="a" id="ab" />
+                    <input type="radio" name="Plantingseedschoose" id="ab" />
                     <label htmlFor="ab">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="a" id="bb" />
+                    <input type="radio" name="Plantingseedschoose" id="bb" />
                     <label htmlFor="bb">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="a" id="cb" />
+                    <input type="radio" name="Plantingseedschoose" id="cb" />
                     <label htmlFor="cb">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Plantingseedsproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -63,7 +64,7 @@ const Farming = () => {
               {/* s/////////////// */}
 
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.1.2
                   </b>
@@ -74,21 +75,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="b" id="ac" />
+                    <input type="radio" name="Ppspacingchoose" id="ac" />
                     <label htmlFor="ac">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="b" id="bc" />
+                    <input type="radio" name="Ppspacingchoose" id="bc" />
                     <label htmlFor="bb">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="b" id="cc" />
+                    <input type="radio" name="Ppspacingchoose" id="cc" />
                     <label htmlFor="cc">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Ppspacingproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Intera hagati y’ingemwe: …………………….."
@@ -98,7 +99,7 @@ const Farming = () => {
 
               {/* //////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.2.2
                   </b>
@@ -109,21 +110,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="c" id="ad" />
+                    <input type="radio" name="PTeacutingchoose" id="ad" />
                     <label htmlFor="ad">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="c" id="bd" />
+                    <input type="radio" name="PTeacutingchoose" id="bd" />
                     <label htmlFor="bd">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="c" id="cd" />
+                    <input type="radio" name="PTeacutingchoose" id="cd" />
                     <label htmlFor="cd">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTeacutingproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -133,7 +134,7 @@ const Farming = () => {
 
               {/* ////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Amahitamo 4.2.3
                   </b>
@@ -145,21 +146,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="d" id="ae" />
+                    <input type="radio" name="PTReplantchoose" id="ae" />
                     <label htmlFor="ae">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="d" id="be" />
+                    <input type="radio" name="PTReplantchoose" id="be" />
                     <label htmlFor="be">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="d" id="ce" />
+                    <input type="radio" name="PTReplantchoose" id="ce" />
                     <label htmlFor="ce">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTReplantproof"
+                  id=""
                   cols="3"
                   rows="3"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -168,7 +169,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.3.1
                   </b>
@@ -176,21 +177,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="e" id="af" />
+                    <input type="radio" name="PTeamodifychoose" id="af" />
                     <label htmlFor="af">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="e" id="bf" />
+                    <input type="radio" name="PTeamodifychoose" id="bf" />
                     <label htmlFor="bf">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="e" id="cf" />
+                    <input type="radio" name="PTeamodifychoose" id="cf" />
                     <label htmlFor="cf">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTeamodifyproof"
+                  id=""
                   cols="3"
                   rows="3"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -199,7 +200,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.4.4
                   </b>
@@ -211,21 +212,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="f" id="ag" />
+                    <input type="radio" name="PTeaManurechoose" id="ag" />
                     <label htmlFor="ag">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="f" id="bg" />
+                    <input type="radio" name="PTeaManurechoose" id="bg" />
                     <label htmlFor="bg">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="f" id="cg" />
+                    <input type="radio" name="PTeaManurechoose" id="cg" />
                     <label htmlFor="cg">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTeaManureproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Ubwoko bw’inyongeramusaruro akoresha: ………………………………………."
@@ -235,7 +236,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.4.7
                   </b>
@@ -246,21 +247,33 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="g" id="ah" />
+                    <input
+                      type="radio"
+                      name="PTeaFaterizerdocschoose"
+                      id="ah"
+                    />
                     <label htmlFor="ah">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="g" id="bh" />
+                    <input
+                      type="radio"
+                      name="PTeaFaterizerdocschoose"
+                      id="bh"
+                    />
                     <label htmlFor="bh">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="g" id="ch" />
+                    <input
+                      type="radio"
+                      name="PTeaFaterizerdocschoose"
+                      id="ch"
+                    />
                     <label htmlFor="ch">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTeaFaterizerdocsproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Ibiro bya NPK ku mwaka: …………….."
@@ -270,7 +283,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.5.2
                   </b>
@@ -283,21 +296,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="h" id="ai" />
+                    <input type="radio" name="PTeaPrisitechoose" id="ai" />
                     <label htmlFor="ai">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="h" id="bi" />
+                    <input type="radio" name="PTeaPrisitechoose" id="bi" />
                     <label htmlFor="bi">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="h" id="ci" />
+                    <input type="radio" name="PTeaPrisitechoose" id="ci" />
                     <label htmlFor="ci">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTeaPrisiteproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -307,7 +320,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.5.3
                   </b>
@@ -318,21 +331,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="i" id="aj" />
+                    <input type="radio" name="PTeaTreatmentchoose" id="aj" />
                     <label htmlFor="aj">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="i" id="bj" />
+                    <input type="radio" name="PTeaTreatmentchoose" id="bj" />
                     <label htmlFor="bj">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="i" id="cj" />
+                    <input type="radio" name="PTeaTreatmentchoose" id="cj" />
                     <label htmlFor="cj">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTeaTreatmentproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -342,7 +355,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.5.4
                   </b>
@@ -354,21 +367,33 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="k" id="ar" />
+                    <input
+                      type="radio"
+                      name="PTraingTreatementchoose"
+                      id="ar"
+                    />
                     <label htmlFor="ar">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="k" id="br" />
+                    <input
+                      type="radio"
+                      name="PTraingTreatementchoose"
+                      id="br"
+                    />
                     <label htmlFor="br">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="k" id="cr" />
+                    <input
+                      type="radio"
+                      name="PTraingTreatementchoose"
+                      id="cr"
+                    />
                     <label htmlFor="cr">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTraingTreatementproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Wahuguwe ryari? ............."
@@ -378,7 +403,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.5.7
                   </b>
@@ -390,21 +415,33 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="l" id="am" />
+                    <input
+                      type="radio"
+                      name="PTreatementPreventionchoose"
+                      id="am"
+                    />
                     <label htmlFor="am">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="l" id="bm" />
+                    <input
+                      type="radio"
+                      name="PTreatementPreventionchoose"
+                      id="bm"
+                    />
                     <label htmlFor="bm">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="l" id="cm" />
+                    <input
+                      type="radio"
+                      name="PTreatementPreventionchoose"
+                      id="cm"
+                    />
                     <label htmlFor="cm">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTreatementPreventionproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -414,7 +451,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.1
                   </b>
@@ -425,21 +462,33 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="m" id="an" />
+                    <input
+                      type="radio"
+                      name="PIligalTreatementchoose"
+                      id="an"
+                    />
                     <label htmlFor="an">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="m" id="bn" />
+                    <input
+                      type="radio"
+                      name="PIligalTreatementchoose"
+                      id="bn"
+                    />
                     <label htmlFor="bn">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="m" id="cn" />
+                    <input
+                      type="radio"
+                      name="PIligalTreatementchoose"
+                      id="cn"
+                    />
                     <label htmlFor="cn">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PIligalTreatementproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -449,7 +498,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.2
                   </b>
@@ -460,21 +509,33 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="n" id="ao" />
+                    <input
+                      type="radio"
+                      name="Ptreatementprotectionchoose"
+                      id="ao"
+                    />
                     <label htmlFor="ao">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="n" id="bo" />
+                    <input
+                      type="radio"
+                      name="Ptreatementprotectionchoose"
+                      id="bo"
+                    />
                     <label htmlFor="bo">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="n" id="co" />
+                    <input
+                      type="radio"
+                      name="Ptreatementprotectionchoose"
+                      id="co"
+                    />
                     <label htmlFor="co">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Ptreatementprotectionproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Imiti akoresha:........."
@@ -484,7 +545,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.3
                   </b>
@@ -495,21 +556,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="o" id="ap" />
+                    <input type="radio" name="PTTProtectionchoose" id="ap" />
                     <label htmlFor="ap">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="o" id="bp" />
+                    <input type="radio" name="PTTProtectionchoose" id="bp" />
                     <label htmlFor="bp">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="o" id="cp" />
+                    <input type="radio" name="PTTProtectionchoose" id="cp" />
                     <label htmlFor="cp">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTTProtectionproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -519,7 +580,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.4
                   </b>
@@ -529,21 +590,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="p" id="al" />
+                    <input type="radio" name="PTBchoose" id="al" />
                     <label htmlFor="al">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="p" id="bl" />
+                    <input type="radio" name="PTBchoose" id="bl" />
                     <label htmlFor="bl">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="p" id="cl" />
+                    <input type="radio" name="PTBchoose" id="cl" />
                     <label htmlFor="cl">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PTBproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -553,7 +614,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.5
                   </b>
@@ -563,21 +624,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="r" id="as" />
+                    <input type="radio" name="PttreatmentObeychoose" id="as" />
                     <label htmlFor="as">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="r" id="bs" />
+                    <input type="radio" name="PttreatmentObeychoose" id="bs" />
                     <label htmlFor="bs">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="r" id="cs" />
+                    <input type="radio" name="PttreatmentObeychoose" id="cs" />
                     <label htmlFor="cs">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PttreatmentObeyproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -587,7 +648,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.6
                   </b>
@@ -598,21 +659,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="s" id="at" />
+                    <input type="radio" name="PRTprotectionchoose" id="at" />
                     <label htmlFor="at">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="s" id="bt" />
+                    <input type="radio" name="PRTprotectionchoose" id="bt" />
                     <label htmlFor="bt">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="s" id="ct" />
+                    <input type="radio" name="PRTprotectionchoose" id="ct" />
                     <label htmlFor="ct">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PRTprotectionproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -622,7 +683,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.8
                   </b>
@@ -632,21 +693,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="t" id="au" />
+                    <input type="radio" name="Ptreatmentchoose" id="au" />
                     <label htmlFor="au">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="t" id="bu" />
+                    <input type="radio" name="Ptreatmentchoose" id="bu" />
                     <label htmlFor="bu">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="t" id="cu" />
+                    <input type="radio" name="Ptreatmentchoose" id="cu" />
                     <label htmlFor="cu">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PtreatmentDocsproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -656,7 +717,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.9
                   </b>
@@ -667,21 +728,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="u" id="av" />
+                    <input type="radio" name="PtreatCchoose" id="av" />
                     <label htmlFor="av">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="u" id="bv" />
+                    <input type="radio" name="PtreatCchoose" id="bv" />
                     <label htmlFor="bv">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="u" id="cv" />
+                    <input type="radio" name="PtreatCchoose" id="cv" />
                     <label htmlFor="cv">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PtreatCproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -691,7 +752,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.10
                   </b>
@@ -702,21 +763,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="v" id="aw" />
+                    <input type="radio" name="PtreatKchoose" id="aw" />
                     <label htmlFor="aw">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="v" id="bw" />
+                    <input type="radio" name="PtreatKchoose" id="bw" />
                     <label htmlFor="bw">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="v" id="cw" />
+                    <input type="radio" name="PtreatKchoose" id="cw" />
                     <label htmlFor="cw">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PtreatKproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -726,7 +787,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.6.11-12
                   </b>
@@ -738,21 +799,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="w" id="ax" />
+                    <input type="radio" name="PtreatCDocschoose" id="ax" />
                     <label htmlFor="ax">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="w" id="bx" />
+                    <input type="radio" name="PtreatCDocschoose" id="bx" />
                     <label htmlFor="bx">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="w" id="cx" />
+                    <input type="radio" name="PtreatCDocschoose" id="cx" />
                     <label htmlFor="cx">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PtreatCDocsproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -762,7 +823,7 @@ const Farming = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 4.7.1
                   </b>
@@ -773,21 +834,21 @@ const Farming = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="x" id="ay" />
+                    <input type="radio" name="PharvestPchoose" id="ay" />
                     <label htmlFor="ay">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="x" id="by" />
+                    <input type="radio" name="PharvestPchoose" id="by" />
                     <label htmlFor="by">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="x" id="cy" />
+                    <input type="radio" name="PharvestPchoose" id="cy" />
                     <label htmlFor="cy">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PharvestPproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""

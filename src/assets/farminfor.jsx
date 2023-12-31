@@ -27,60 +27,64 @@ const FarmInfo = () => {
             {/* Internal group member ID*/}
 
             <div className="flex flex-col">
-              <label htmlFor="iptor">
+              <label htmlFor="dpi">
                 <strong>Internal Group Member ID(PDI)</strong>
               </label>
               <input
                 type="text"
-                id="iptor"
+                id="dpi"
+                name="FPDI"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
 
-            {/* TELPHONE */}
+            {/* FARM ID CODE */}
             <div className="flex flex-col">
               <label>
                 <strong>Internal farm ID (KODE)</strong>
               </label>
               <input
                 type="text"
+                name="FKODE"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="zone">
+              <label htmlFor="upi">
                 <strong>National farm ID (UPI) icyangombwa cyubutaka</strong>
               </label>
               <input
                 type="text"
-                id="zone"
+                id="upi"
+                name="FUPI"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
             {/* AKAGARI*/}
 
             <div className="flex flex-col">
-              <label htmlFor="MB">
+              <label htmlFor="cel">
                 <strong>Akagari </strong>
               </label>
 
               <input
                 type="text"
-                id="MB"
-                name="owner"
+                id="cel"
+                name="Fcell"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
             {/* UMUDUGUDU */}
             <div className="flex flex-col">
-              <label htmlFor="COP">
+              <label htmlFor="vil">
                 <strong>Umudugudu</strong>
               </label>
 
               <input
                 type="text"
-                id="COP"
+                id="vil"
+                name="Fvillage"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
@@ -90,63 +94,67 @@ const FarmInfo = () => {
           <div className="flex flex-col w-full gap-2">
             {/* UBUSO MBUMBE */}
             <div className="flex flex-col">
-              <label htmlFor="vil">
+              <label htmlFor="area">
                 <strong>Ubuso mbumbe</strong>
               </label>
 
               <input
                 type="text"
-                id="vil"
+                id="area"
+                name="Farea"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
             {/* IMBUTO */}
             <div className="flex flex-col">
-              <label htmlFor="id">
+              <label htmlFor="variety">
                 <strong>IMBUTO (varieties)</strong>
               </label>
 
               <input
                 type="text"
-                id="id"
-                name=""
+                id="variety"
+                name="Fvarieties"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
 
             {/* UBUSO BUHIZEHO Icyayi */}
             <div className="flex flex-col">
-              <label htmlFor="RS">
+              <label htmlFor="areg">
                 <strong>Ubuso buhinzeho icyayi</strong>
               </label>
 
               <input
                 type="text"
-                id="RS"
+                id="areg"
+                name="FareaGrowedTea"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="ST">
+              <label htmlFor="pmw">
                 <strong>Abakozi bahoraho</strong>
               </label>
 
               <input
                 type="text"
-                id="ST"
+                id="pmw"
+                name="FpermanentWork"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
             {/* NYAKABYIZI */}
             <div className="flex flex-col">
-              <label htmlFor="cell">
+              <label htmlFor="temp">
                 <strong>Nyakabyizi</strong>
               </label>
 
               <input
                 type="text"
-                id="cell"
+                id="temp"
+                name="FtemporaryWork"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>

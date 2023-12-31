@@ -86,25 +86,27 @@ const InspectorForm = () => {
                   <div className="flex flex-col w-full gap-2">
                     {/* IZINA RY'UMUGENZUZI */}
                     <div className="flex flex-col">
-                      <label htmlFor="iptor">
+                      <label htmlFor="">
                         <strong>
                           Izina ry’Umugenzuzi w’imbere (Internal Auditor):
                         </strong>
                       </label>
                       <input
                         type="text"
-                        id="iptor"
+                        id=""
+                        name="inspectorName"
                         className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                       />
                     </div>
                     {/* AMAZINA Y'UMUHINZI */}
                     <div className="flex flex-col">
-                      <label htmlFor="iptor">
+                      <label htmlFor="">
                         <strong>Amazina y’Umuhinzi wasuwe:</strong>
                       </label>
                       <input
                         type="text"
-                        id="iptor"
+                        id=""
+                        name="vistedFarmerName"
                         className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                       />
                     </div>
@@ -116,6 +118,7 @@ const InspectorForm = () => {
                       </label>
                       <input
                         type="date"
+                        name="dateOfInspection"
                         className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                       />
                     </div>
@@ -129,7 +132,7 @@ const InspectorForm = () => {
                       <input
                         type="radio"
                         id="nyi"
-                        name="owner"
+                        name="existWhenInspection"
                         className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                       />
                       <label htmlFor="nyi" className="pl-2">
@@ -140,7 +143,7 @@ const InspectorForm = () => {
                       <input
                         type="radio"
                         id="si"
-                        name="owner"
+                        name="existWhenInspection"
                         className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                       />
                       <label htmlFor="si" className="pl-2">
@@ -151,7 +154,7 @@ const InspectorForm = () => {
                     {/* IGIHE UBUGENZUZI BWABEREYE */}
 
                     <div className="flex flex-col">
-                      <label htmlFor="bwa">
+                      <label htmlFor="">
                         <strong>
                           Igihe ubugenzuzi bwatangiriye/bwarangiriye:
                         </strong>
@@ -161,6 +164,7 @@ const InspectorForm = () => {
                           start:
                           <input
                             type="time"
+                            name="startingTime"
                             className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                           />
                         </span>
@@ -169,6 +173,7 @@ const InspectorForm = () => {
                           END:
                           <input
                             type="time"
+                            name="endingTime"
                             className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                           />
                         </span>
@@ -184,7 +189,7 @@ const InspectorForm = () => {
                         <input
                           type="radio"
                           id="Y"
-                          name="fam"
+                          name="inspectionPlace"
                           className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                         />
                         <label htmlFor="Y" className="pl-2">
@@ -195,7 +200,7 @@ const InspectorForm = () => {
                         <input
                           type="radio"
                           id="O"
-                          name="fam"
+                          name="inspectionPlace"
                           className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                         />
                         <label htmlFor="O" className="pl-2">

@@ -27,7 +27,7 @@ const HealthSafety = () => {
               {/* //////////////// */}
 
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.2.1 (>5w)
 `}
@@ -39,21 +39,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="a" id="ab" />
+                    <input type="radio" name="workCoopchoose" id="ab" />
                     <label htmlFor="ab">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="a" id="bb" />
+                    <input type="radio" name="workCoopchoose" id="bb" />
                     <label htmlFor="bb">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="a" id="cb" />
+                    <input type="radio" name="workCoopchoose" id="cb" />
                     <label htmlFor="cb">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="workCoopproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -64,7 +64,7 @@ const HealthSafety = () => {
               {/* s/////////////// */}
 
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.2.2 (>5w)
 `}
@@ -76,21 +76,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="b" id="ac" />
+                    <input type="radio" name="conviseCMchoose" id="ac" />
                     <label htmlFor="ac">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="b" id="bc" />
+                    <input type="radio" name="conviseCMchoose" id="bc" />
                     <label htmlFor="bb">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="b" id="cc" />
+                    <input type="radio" name="conviseCMchoose" id="cc" />
                     <label htmlFor="cc">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="conviseCMproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -100,7 +100,7 @@ const HealthSafety = () => {
 
               {/* //////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.2.3 (>5w)
 `}
@@ -112,21 +112,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="c" id="ad" />
+                    <input type="radio" name="workConvisechoose" id="ad" />
                     <label htmlFor="ad">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="c" id="bd" />
+                    <input type="radio" name="workConvisechoose" id="bd" />
                     <label htmlFor="bd">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="c" id="cd" />
+                    <input type="radio" name="workConvisechoose" id="cd" />
                     <label htmlFor="cd">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="workConviseproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -136,7 +136,7 @@ const HealthSafety = () => {
 
               {/* ////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.3.1 (>5w)`}
                   </b>
@@ -148,21 +148,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="d" id="ae" />
+                    <input type="radio" name="workPTchoose" id="ae" />
                     <label htmlFor="ae">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="d" id="be" />
+                    <input type="radio" name="workPTchoose" id="be" />
                     <label htmlFor="be">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="d" id="ce" />
+                    <input type="radio" name="workPTchoose" id="ce" />
                     <label htmlFor="ce">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="workPTproof"
+                  id=""
                   cols="3"
                   rows="3"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -171,7 +171,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.3.2 (>5w)`}
                   </b>
@@ -182,21 +182,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="e" id="af" />
+                    <input type="radio" name="workPayeProcedchoose" id="af" />
                     <label htmlFor="af">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="e" id="bf" />
+                    <input type="radio" name="workPayeProcedchoose" id="bf" />
                     <label htmlFor="bf">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="e" id="cf" />
+                    <input type="radio" name="workPayeProcedchoose" id="cf" />
                     <label htmlFor="cf">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="workPayeProcedproof"
+                  id=""
                   cols="3"
                   rows="3"
                   className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -205,7 +205,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.3.4`}
                   </b>
@@ -216,21 +216,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="f" id="ag" />
+                    <input type="radio" name="workPaymentchoose" id="ag" />
                     <label htmlFor="ag">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="f" id="bg" />
+                    <input type="radio" name="workPaymentchoose" id="bg" />
                     <label htmlFor="bg">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="f" id="cg" />
+                    <input type="radio" name="workPaymentchoose" id="cg" />
                     <label htmlFor="cg">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="workpayementproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -240,7 +240,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.3.5
                   </b>
@@ -252,21 +252,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="g" id="ah" />
+                    <input type="radio" name="WpaymentReducechoose" id="ah" />
                     <label htmlFor="ah">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="g" id="bh" />
+                    <input type="radio" name="WpaymentReducechoose" id="bh" />
                     <label htmlFor="bh">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="g" id="ch" />
+                    <input type="radio" name="WpaymentReducechoose" id="ch" />
                     <label htmlFor="ch">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WpaymentReduceproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -276,7 +276,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.3.7 (>5w)`}
                   </b>
@@ -288,21 +288,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="h" id="ai" />
+                    <input type="radio" name="WorkListchoose" id="ai" />
                     <label htmlFor="ai">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="h" id="bi" />
+                    <input type="radio" name="WorkListchoose" id="bi" />
                     <label htmlFor="bi">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="h" id="ci" />
+                    <input type="radio" name="WorkListchoose" id="ci" />
                     <label htmlFor="ci">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WorkListproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -312,7 +312,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.3.8
                   </b>
@@ -323,21 +323,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="i" id="aj" />
+                    <input type="radio" name="PaymentEquallychoose" id="aj" />
                     <label htmlFor="aj">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="i" id="bj" />
+                    <input type="radio" name="PaymentEquallychoose" id="bj" />
                     <label htmlFor="bj">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="i" id="cj" />
+                    <input type="radio" name="PaymentEquallychoose" id="cj" />
                     <label htmlFor="cj">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="PaymentEquallyproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -347,7 +347,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.3.10
                   </b>
@@ -357,21 +357,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="k" id="ar" />
+                    <input type="radio" name="WorkerSeacherchoose" id="ar" />
                     <label htmlFor="ar">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="k" id="br" />
+                    <input type="radio" name="WorkerSeacherchoose" id="br" />
                     <label htmlFor="br">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="k" id="cr" />
+                    <input type="radio" name="WorkerSeacherchoose" id="cr" />
                     <label htmlFor="cr">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WorkerSeacherproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -381,7 +381,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.5.1
                   </b>
@@ -392,21 +392,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="l" id="am" />
+                    <input type="radio" name="W8hrsabovechoose" id="am" />
                     <label htmlFor="am">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="l" id="bm" />
+                    <input type="radio" name="W8hrsabovechoose" id="bm" />
                     <label htmlFor="bm">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="l" id="cm" />
+                    <input type="radio" name="W8hrsabovechoose" id="cm" />
                     <label htmlFor="cm">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Work8hrsaboveproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -416,7 +416,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.5.2 (>5w)`}
                   </b>
@@ -427,21 +427,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="m" id="an" />
+                    <input type="radio" name="WadditionHrschoose" id="an" />
                     <label htmlFor="an">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="m" id="bn" />
+                    <input type="radio" name="WadditionHrschoose" id="bn" />
                     <label htmlFor="bn">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="m" id="cn" />
+                    <input type="radio" name="WadditionHrschoose" id="cn" />
                     <label htmlFor="cn">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WadditionHrsProof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -451,7 +451,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.5.3 (>5w)`}
                   </b>
@@ -462,21 +462,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="n" id="ao" />
+                    <input type="radio" name="WPFchoose" id="ao" />
                     <label htmlFor="ao">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="n" id="bo" />
+                    <input type="radio" name="WPFchoose" id="bo" />
                     <label htmlFor="bo">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="n" id="co" />
+                    <input type="radio" name="WPFchoose" id="co" />
                     <label htmlFor="co">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WPFproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -486,7 +486,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.5.4
                   </b>
@@ -497,21 +497,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="o" id="ap" />
+                    <input type="radio" name="Wbelow18yschoose" id="ap" />
                     <label htmlFor="ap">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="o" id="bp" />
+                    <input type="radio" name="Wbelow18yschoose" id="bp" />
                     <label htmlFor="bp">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="o" id="cp" />
+                    <input type="radio" name="Wbelow18yschoose" id="cp" />
                     <label htmlFor="cp">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Wbelow18ysproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -521,7 +521,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     {`Ingenzi 5.6.2 (>5w)`}
                   </b>
@@ -532,21 +532,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="p" id="al" />
+                    <input type="radio" name="Wsafeboxchoose" id="al" />
                     <label htmlFor="al">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="p" id="bl" />
+                    <input type="radio" name="Wsafeboxchoose" id="bl" />
                     <label htmlFor="bl">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="p" id="cl" />
+                    <input type="radio" name="Wsafeboxchoose" id="cl" />
                     <label htmlFor="cl">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Wsafeboxproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -556,7 +556,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.6.3
                   </b>
@@ -567,21 +567,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="r" id="as" />
+                    <input type="radio" name="WfirstAidechoose" id="as" />
                     <label htmlFor="as">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="r" id="bs" />
+                    <input type="radio" name="WfirstAidechoose" id="bs" />
                     <label htmlFor="bs">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="r" id="cs" />
+                    <input type="radio" name="WfirstAidechoose" id="cs" />
                     <label htmlFor="cs">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WfirstAideproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Ikigo nderabuzima kiri hafi:............"
@@ -591,7 +591,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <strong>
                     Abakora mw’isambu yawe bose bafite MITUWERI (ubwishingizi
                     m’ukwivuza)?
@@ -599,21 +599,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="s" id="at" />
+                    <input type="radio" name="Winsurancechoose" id="at" />
                     <label htmlFor="at">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="s" id="bt" />
+                    <input type="radio" name="Winsurancechoose" id="bt" />
                     <label htmlFor="bt">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="s" id="ct" />
+                    <input type="radio" name="Winsurancechoose" id="ct" />
                     <label htmlFor="ct">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Winsuranceproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder="Abatabufite ni bangahe?………….."
@@ -623,7 +623,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.6.6
                   </b>
@@ -634,21 +634,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="t" id="au" />
+                    <input type="radio" name="Wdwaterchoose" id="au" />
                     <label htmlFor="au">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="t" id="bu" />
+                    <input type="radio" name="Wdwaterchoose" id="bu" />
                     <label htmlFor="bu">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="t" id="cu" />
+                    <input type="radio" name="Wdwaterchoose" id="cu" />
                     <label htmlFor="cu">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Wdwaterproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -658,7 +658,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.6.7
                   </b>
@@ -669,21 +669,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="u" id="av" />
+                    <input type="radio" name="Wtoiletchoose" id="av" />
                     <label htmlFor="av">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="u" id="bv" />
+                    <input type="radio" name="Wtoiletchoose" id="bv" />
                     <label htmlFor="bv">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="u" id="cv" />
+                    <input type="radio" name="Wtoiletchoose" id="cv" />
                     <label htmlFor="cv">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="Wtoiletproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -693,7 +693,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.6.9
                   </b>
@@ -704,21 +704,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="v" id="aw" />
+                    <input type="radio" name="WTAavoidchoose" id="aw" />
                     <label htmlFor="aw">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="v" id="bw" />
+                    <input type="radio" name="WTAavoidchoose" id="bw" />
                     <label htmlFor="bw">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="v" id="cw" />
+                    <input type="radio" name="WTAavoidchoose" id="cw" />
                     <label htmlFor="cw">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WTAavoidproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -728,7 +728,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.6.10
                   </b>
@@ -739,21 +739,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="w" id="ax" />
+                    <input type="radio" name="WweqCaringchoose" id="ax" />
                     <label htmlFor="ax">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="w" id="bx" />
+                    <input type="radio" name="WweqCaringchoose" id="bx" />
                     <label htmlFor="bx">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="w" id="cx" />
+                    <input type="radio" name="WweqCaringchoose" id="cx" />
                     <label htmlFor="cx">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WweqCaringproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -763,7 +763,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.6.11
                   </b>
@@ -774,21 +774,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="x" id="ay" />
+                    <input type="radio" name="WWcarechoose" id="ay" />
                     <label htmlFor="ay">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="x" id="by" />
+                    <input type="radio" name="WWcarechoose" id="by" />
                     <label htmlFor="by">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="x" id="cy" />
+                    <input type="radio" name="WWcarechoose" id="cy" />
                     <label htmlFor="cy">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WWcareproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -798,7 +798,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.6.12
                   </b>
@@ -809,21 +809,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="ab" id="vry" />
-                    <label htmlFor="vry">Yego</label>
+                    <input type="radio" name="WAlivechoose" id="ti" />
+                    <label htmlFor="ti">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="ab" id="vry" />
-                    <label htmlFor="vry">Oya</label>
+                    <input type="radio" name="WAlivechoose" id="ro" />
+                    <label htmlFor="ro">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="ab" id="vry" />
-                    <label htmlFor="vry">Ntibikorwa</label>
+                    <input type="radio" name="WAlivechoose" id="or" />
+                    <label htmlFor="or">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WAliveproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -833,7 +833,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.7.3
                   </b>
@@ -844,21 +844,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="ac" id="vrb" />
-                    <label htmlFor="vrb">Yego</label>
+                    <input type="radio" name="WDocsWantchoose" id="tito" />
+                    <label htmlFor="tito">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="ac" id="vrb" />
-                    <label htmlFor="vrb">Oya</label>
+                    <input type="radio" name="WDocsWantchoose" id="tik" />
+                    <label htmlFor="tik">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="ac" id="vrb" />
-                    <label htmlFor="vrb">Ntibikorwa</label>
+                    <input type="radio" name="WDocsWantchoose" id="tivk" />
+                    <label htmlFor="tivk">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WDocsWantproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""
@@ -868,7 +868,7 @@ const HealthSafety = () => {
 
               {/* //////////////// */}
               <div className="flex flex-col">
-                <label htmlFor="iptor" className="flex gap-2 items-center">
+                <label htmlFor="" className="flex gap-2 items-center">
                   <b className="border-[2px] border-[#166534] p-2 shadow-lg">
                     Ingenzi 5.8.2
                   </b>
@@ -879,21 +879,21 @@ const HealthSafety = () => {
                 </label>
                 <p className="flex gap-4 font-bold my-2">
                   <span>
-                    <input type="radio" name="ad" id="vrc" />
-                    <label htmlFor="vrc">Yego</label>
+                    <input type="radio" name="WLandPermitchoose" id="Caffe" />
+                    <label htmlFor="Caffe">Yego</label>
                   </span>
                   <span>
-                    <input type="radio" name="ad" id="vrc" />
-                    <label htmlFor="vrc">Oya</label>
+                    <input type="radio" name="WLandPermitchoose" id="cake" />
+                    <label htmlFor="cake">Oya</label>
                   </span>
                   <span>
-                    <input type="radio" name="ad" id="vrc" />
-                    <label htmlFor="vrc">Ntibikorwa</label>
+                    <input type="radio" name="WLandPermitchoose" id="roud" />
+                    <label htmlFor="roud">Ntibikorwa</label>
                   </span>
                 </p>
                 <textarea
-                  name=""
-                  id="iptor"
+                  name="WLandPermitproof"
+                  id=""
                   cols="3"
                   rows="3"
                   placeholder=""

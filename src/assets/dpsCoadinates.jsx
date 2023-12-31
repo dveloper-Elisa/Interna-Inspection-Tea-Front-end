@@ -29,39 +29,42 @@ const GpsCoordinates = () => {
             {/* Latitude*/}
 
             <div className="flex flex-col">
-              <label htmlFor="iptor">
+              <label htmlFor="gpl">
                 <strong>Latitude</strong>
               </label>
               <input
                 type="text"
-                id="iptor"
+                id="gpl"
+                name="Glatitude"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
 
             {/* Longitude */}
             <div className="flex flex-col">
-              <label>
+              <label htmlFor="log">
                 <strong>Longitude</strong>
               </label>
               <input
                 type="text"
+                id="log"
+                name="Glogitude"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>
           </div>
 
-          {/* IMBUTO */}
           <div className="flex flex-col w-full gap-2">
-            {/* UBUSO MBUMBE */}
+            {/* Altitude */}
             <div className="flex flex-col">
-              <label htmlFor="vil">
-                <strong>Logtude</strong>
+              <label htmlFor="alt">
+                <strong>Altitude</strong>
               </label>
 
               <input
                 type="text"
-                id="vil"
+                id="alt"
+                name="Galtitude"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
             </div>

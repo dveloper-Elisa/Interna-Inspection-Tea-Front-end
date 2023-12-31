@@ -5,8 +5,6 @@ import Button from "./button.jsx";
 const Login = () => {
   return (
     <div className="flex py-4 justify-between gap-10 m-[2rem]">
-      {/* side bar */}
-
       <div className="image-login h-[80vh] w-[100%] flex justify-center items-center">
         <div className="flex flex-col items-center gap-7 bg-green-800 bg-opacity-75 p-3 rounded-md max-w-fit  mb-20 transform hover:scale-110 transition-transform duration-500 mt-20">
           <div className="flex flex-col  font-serif">
