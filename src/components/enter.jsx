@@ -1,8 +1,26 @@
-// import { Link } from "react-router-dom";
 import "../../src/index.css";
 import Button from "./button.jsx";
+import { useState } from "react";
 
 const Login = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleInputs = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Handle form submission on button click
+  const handleLogin = () => {
+    if (formData.email === "") {
+      return console.log("email is required");
+    }
+    console.log(formData);
+  };
+
   return (
     <div className="flex py-4 justify-between gap-10 m-[2rem]">
       <div className="image-login h-[80vh] w-[100%] flex justify-center items-center">
@@ -13,24 +31,30 @@ const Login = () => {
               Login here
             </span>
           </div>
-          <form action="" className="flex flex-col gap-10 ">
+          <div className="flex flex-col gap-10 ">
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputs}
               placeholder="Enter email"
               className="px-10 py-2 text-[20px] rounded-md"
             />
             <input
               type="password"
-              placeholder="Enter passwor"
+              name="password"
+              value={formData.password}
+              onChange={handleInputs}
+              placeholder="Enter password"
               className="px-10 py-2 text-[20px] rounded-md"
             />
 
             <Button
-              href="/login/dashboard"
+              onClick={handleLogin} // Handle form submission on button click
               text="Login"
               customCss="text-center bg-[#166534] text-white tracking-[2px] font-bold text-[20px] hover:bg-[#fff] hover:border-[#166534] hover:text-black "
             />
-          </form>
+          </div>
         </div>
       </div>
     </div>
