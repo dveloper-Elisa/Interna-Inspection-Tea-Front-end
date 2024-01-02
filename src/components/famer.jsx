@@ -1,5 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Button from "./button";
 const Famer = () => {
+  const navigation = useNavigate();
+
+  const handleNavigate = () => {
+    navigation("/nextForm");
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toglerBtn = () => {
@@ -202,7 +210,7 @@ const Famer = () => {
               />
             </div>
           </div>
-          {/* being used */}
+          <Button onClick={handleNavigate} text="Next" />
         </div>
       )}
     </div>

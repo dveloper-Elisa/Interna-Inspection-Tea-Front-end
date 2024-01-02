@@ -1,6 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Button from "../components/button";
 
 const FarmOperator = () => {
+  const navigation = useNavigate();
+
+  const handleNavigate = () => {
+    navigation("/farminfor");
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   const toglerBtn = () => {
     setIsOpen(!isOpen);
@@ -203,6 +211,7 @@ const FarmOperator = () => {
               />
             </div>
           </div>
+          <Button onClick={handleNavigate} text={"Next"} />
         </div>
       )}
     </div>

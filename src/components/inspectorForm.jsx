@@ -215,9 +215,7 @@ const InspectorForm = () => {
               )}
             </div>
             {/* 2.1.1	AMAKURU K’UMUHINZI NYIRIMURIMA (FARM OWNER ) */}
-            <div className="flex">
-              <Famer />
-            </div>
+            <div className="flex">{/* <Famer /> */}</div>
             <div className="flex">
               <FarmOperator />
             </div>
