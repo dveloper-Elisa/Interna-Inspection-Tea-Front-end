@@ -1,10 +1,49 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Button from "../components/button";
 
 const FarmingLure = () => {
+  const [formDataRule, setFormDataRule] = useState({
+    Mchoose: "",
+    Mproof: "",
+    Lchoose: "",
+    Lproof: "",
+    fSchoose: "",
+    Sproof: "",
+    Docchoose: "",
+    Docproof: "",
+    Coopchoose: "",
+    Coopproof: "",
+    ClimateChoose: "",
+    Climateproof: "",
+    MmarketChoose: "",
+    Mmarketproof: "",
+    Mworkchoose: "",
+    Mworkproof: "",
+    Mcooprulechoose: "",
+    Mcoopruleproof: "",
+    Mcoopguidechoose: "",
+    Mcoopguideproof: "",
+    Mcoopyouthchoose: "",
+    Mcoopyouthproof: "",
+  });
+
+  // handling input change
+
+  const hundleInputsChange = (names, values) => {
+    setFormDataRule({ ...formDataRule, [names]: values });
+  };
+
   const navigate = useNavigate();
   const navigateFunction = () => {
-    navigate("/inheritfarm");
+    const allDataInfo = Object.values(formDataRule).every(
+      (data) => data !== null || data !== ""
+    );
+    if (allDataInfo) {
+      navigate("/inheritfarm");
+    } else {
+      alert("Please fill oll the fields");
+    }
   };
 
   const navigateBack = () => {
@@ -42,21 +81,40 @@ const FarmingLure = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Mchoose" id="Y" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => hundleInputsChange("Mchoose", "yego")}
+                    name="Mchoose"
+                    id="Y"
+                  />
                   <label htmlFor="Y">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Mchoose" id="O" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => hundleInputsChange("Mchoose", "oya")}
+                    name="Mchoose"
+                    id="O"
+                  />
                   <label htmlFor="O">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Mchoose" id="N" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() => hundleInputsChange("Mchoose", "ntibikorwa")}
+                    name="Mchoose"
+                    id="N"
+                  />
                   <label htmlFor="N">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Mproof"
                 id=""
+                onChange={(e) => hundleInputsChange("Mproof", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder="Impamvu / gihamya..."
@@ -79,21 +137,40 @@ const FarmingLure = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Lchoose" id="E" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => hundleInputsChange("Lchoose", "yego")}
+                    name="Lchoose"
+                    id="E"
+                  />
                   <label htmlFor="E">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Lchoose" id="NE" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => hundleInputsChange("Lchoose", "oya")}
+                    name="Lchoose"
+                    id="NE"
+                  />
                   <label htmlFor="NE">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Lchoose" id="W" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() => hundleInputsChange("Lchoose", "ntibikorwa")}
+                    name="Lchoose"
+                    id="W"
+                  />
                   <label htmlFor="W">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Lproof"
                 id=""
+                onChange={(e) => hundleInputsChange("Lproof", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder="Impamvu / gihamya..."
@@ -116,21 +193,42 @@ const FarmingLure = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="fSchoose" id="oi" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => hundleInputsChange("fSchoose", "yego")}
+                    name="fSchoose"
+                    id="oi"
+                  />
                   <label htmlFor="oi">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="fSchoose" id="rk" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => hundleInputsChange("fSchoose", "oya")}
+                    name="fSchoose"
+                    id="rk"
+                  />
                   <label htmlFor="rk">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="fSchoose" id="re" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      hundleInputsChange("fSchoose", "ntibikorwa")
+                    }
+                    name="fSchoose"
+                    id="re"
+                  />
                   <label htmlFor="re">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Sproof"
                 id=""
+                onChange={(e) => hundleInputsChange("Sproof", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder="Impamvu / gihamya..."
@@ -153,21 +251,42 @@ const FarmingLure = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Docchoose" id="ol" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => hundleInputsChange("Docchoose", "yego")}
+                    name="Docchoose"
+                    id="ol"
+                  />
                   <label htmlFor="ol">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Docchoose" id="rl" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => hundleInputsChange("Docchoose", "oya")}
+                    name="Docchoose"
+                    id="rl"
+                  />
                   <label htmlFor="rl">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Docchoose" id="rf" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      hundleInputsChange("Docchoose", "ntibikorwa")
+                    }
+                    name="Docchoose"
+                    id="rf"
+                  />
                   <label htmlFor="rf">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Docproof"
                 id=""
+                onChange={(e) => hundleInputsChange("Docproof", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder="Impamvu / gihamya..."
@@ -188,27 +307,51 @@ const FarmingLure = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Coopchoose" id="om" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => hundleInputsChange("Coopchoose", "yego")}
+                    name="Coopchoose"
+                    id="om"
+                  />
                   <label htmlFor="om">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Coopchoose" id="rm" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => hundleInputsChange("Coopchoose", "oya")}
+                    name="Coopchoose"
+                    id="rm"
+                  />
                   <label htmlFor="rm">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Coopchoose" id="rg" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      hundleInputsChange("Coopchoose", "ntibikorwa")
+                    }
+                    name="Coopchoose"
+                    id="rg"
+                  />
                   <label htmlFor="rg">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Coopproof"
                 id=""
+                onChange={(e) =>
+                  hundleInputsChange("Coopproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Impamvu / gihamya..."
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               ></textarea>
             </div>
+
             {/* //////////// */}
             <div className="flex flex-col">
               <label htmlFor="" className="flex gap-2 items-center">
@@ -222,21 +365,44 @@ const FarmingLure = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="ClimateChoose" id="ka" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => hundleInputsChange("ClimateChoose", "yego")}
+                    name="ClimateChoose"
+                    id="ka"
+                  />
                   <label htmlFor="ka">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="ClimateChoose" id="oa" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => hundleInputsChange("ClimateChoose", "oya")}
+                    name="ClimateChoose"
+                    id="oa"
+                  />
                   <label htmlFor="oa">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="ClimateChoose" id="na" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      hundleInputsChange("ClimateChoose", "ntibikorwa")
+                    }
+                    name="ClimateChoose"
+                    id="na"
+                  />
                   <label htmlFor="na">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Climateproof"
                 id=""
+                onChange={(e) =>
+                  hundleInputsChange("Climateproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Impamvu / gihamya..."
@@ -261,21 +427,44 @@ const FarmingLure = () => {
             </label>
             <p className="flex gap-4 font-bold my-2">
               <span>
-                <input type="radio" name="MmarketChoose" id="kb" />
+                <input
+                  type="radio"
+                  value={"yego"}
+                  onChange={() => hundleInputsChange("MmarketChoose", "yego")}
+                  name="MmarketChoose"
+                  id="kb"
+                />
                 <label htmlFor="kb">Yego</label>
               </span>
               <span>
-                <input type="radio" name="MmarketChoose" id="ob" />
+                <input
+                  type="radio"
+                  value={"oya"}
+                  onChange={() => hundleInputsChange("MmarketChoose", "oya")}
+                  name="MmarketChoose"
+                  id="ob"
+                />
                 <label htmlFor="ob">Oya</label>
               </span>
               <span>
-                <input type="radio" name="MmarketChoose" id="nb" />
+                <input
+                  type="radio"
+                  value={"ntibikorwa"}
+                  onChange={() =>
+                    hundleInputsChange("MmarketChoose", "ntibikorwa")
+                  }
+                  name="MmarketChoose"
+                  id="nb"
+                />
                 <label htmlFor="nb">Ntibikorwa</label>
               </span>
             </p>
             <textarea
               name="Mmarketproof"
               id=""
+              onChange={(e) =>
+                hundleInputsChange("Mmarketproof", e.target.value)
+              }
               cols="3"
               rows="3"
               placeholder="Impamvu / gihamya..."
@@ -299,21 +488,42 @@ const FarmingLure = () => {
             </label>
             <p className="flex gap-4 font-bold my-2">
               <span>
-                <input type="radio" name="Mworkchoose" id="kc" />
+                <input
+                  type="radio"
+                  value={"yego"}
+                  onChange={() => hundleInputsChange("Mworkchoose", "yego")}
+                  name="Mworkchoose"
+                  id="kc"
+                />
                 <label htmlFor="kc">Yego</label>
               </span>
               <span>
-                <input type="radio" name="Mworkchoose" id="oc" />
+                <input
+                  type="radio"
+                  value={"oya"}
+                  onChange={() => hundleInputsChange("Mworkchoose", "oya")}
+                  name="Mworkchoose"
+                  id="oc"
+                />
                 <label htmlFor="oc">Oya</label>
               </span>
               <span>
-                <input type="radio" name="Mworkchoose" id="nc" />
+                <input
+                  type="radio"
+                  value={"ntibikorwa"}
+                  onChange={() =>
+                    hundleInputsChange("Mworkchoose", "ntibikorwa")
+                  }
+                  name="Mworkchoose"
+                  id="nc"
+                />
                 <label htmlFor="nc">Ntibikorwa</label>
               </span>
             </p>
             <textarea
               name="Mworkproof"
               id=""
+              onChange={(e) => hundleInputsChange("Mworkproof", e.target.value)}
               cols="3"
               rows="3"
               placeholder="Impamvu / gihamya..."
@@ -337,21 +547,44 @@ const FarmingLure = () => {
             </label>
             <p className="flex gap-4 font-bold my-2">
               <span>
-                <input type="radio" name="Mcooprulechoose" id="kd" />
+                <input
+                  type="radio"
+                  value={"yego"}
+                  onChange={() => hundleInputsChange("Mcooprulechoose", "yego")}
+                  name="Mcooprulechoose"
+                  id="kd"
+                />
                 <label htmlFor="kd">Yego</label>
               </span>
               <span>
-                <input type="radio" name="Mcooprulechoose" id="od" />
+                <input
+                  type="radio"
+                  value={"oya"}
+                  onChange={() => hundleInputsChange("Mcooprulechoose", "oya")}
+                  name="Mcooprulechoose"
+                  id="od"
+                />
                 <label htmlFor="od">Oya</label>
               </span>
               <span>
-                <input type="radio" name="Mcooprulechoose" id="nd" />
+                <input
+                  type="radio"
+                  value={"ntibikorwa"}
+                  onChange={() =>
+                    hundleInputsChange("Mcooprulechoose", "ntibikorwa")
+                  }
+                  name="Mcooprulechoose"
+                  id="nd"
+                />
                 <label htmlFor="nd">Ntibikorwa</label>
               </span>
             </p>
             <textarea
               name="Mcoopruleproof"
               id=""
+              onChange={(e) =>
+                hundleInputsChange("Mcoopruleproof", e.target.value)
+              }
               cols="3"
               rows="3"
               placeholder="Impamvu / gihamya..."
@@ -374,21 +607,46 @@ const FarmingLure = () => {
             </label>
             <p className="flex gap-4 font-bold my-2">
               <span>
-                <input type="radio" name="Mcoopguidechoose" id="kj" />
+                <input
+                  type="radio"
+                  value={"yego"}
+                  onChange={() =>
+                    hundleInputsChange("Mcoopguidechoose", "yego")
+                  }
+                  name="Mcoopguidechoose"
+                  id="kj"
+                />
                 <label htmlFor="kj">Yego</label>
               </span>
               <span>
-                <input type="radio" name="Mcoopguidechoose" id="oj" />
+                <input
+                  type="radio"
+                  value={"oya"}
+                  onChange={() => hundleInputsChange("Mcoopguidechoose", "oya")}
+                  name="Mcoopguidechoose"
+                  id="oj"
+                />
                 <label htmlFor="oj">Oya</label>
               </span>
               <span>
-                <input type="radio" name="Mcoopguidechoose" id="nj" />
+                <input
+                  type="radio"
+                  value={"ntibikorwa"}
+                  onChange={() =>
+                    hundleInputsChange("Mcoopguidechoose", "ntibikorwa")
+                  }
+                  name="Mcoopguidechoose"
+                  id="nj"
+                />
                 <label htmlFor="nj">Ntibikorwa</label>
               </span>
             </p>
             <textarea
               name="Mcoopguideproof"
               id=""
+              onChange={(e) =>
+                hundleInputsChange("Mcoopguideproof", e.target.value)
+              }
               cols="3"
               rows="3"
               placeholder="Impamvu / gihamya..."
@@ -409,21 +667,46 @@ const FarmingLure = () => {
             </label>
             <p className="flex gap-4 font-bold my-2">
               <span>
-                <input type="radio" name="Mcoopyouthchoose" id="kp" />
+                <input
+                  type="radio"
+                  value={"yego"}
+                  onChange={() =>
+                    hundleInputsChange("Mcoopyouthchoose", "yego")
+                  }
+                  name="Mcoopyouthchoose"
+                  id="kp"
+                />
                 <label htmlFor="kp">Yego</label>
               </span>
               <span>
-                <input type="radio" name="Mcoopyouthchoose" id="op" />
+                <input
+                  type="radio"
+                  value={"oya"}
+                  onChange={() => hundleInputsChange("Mcoopyouthchoose", "oya")}
+                  name="Mcoopyouthchoose"
+                  id="op"
+                />
                 <label htmlFor="op">Oya</label>
               </span>
               <span>
-                <input type="radio" name="Mcoopyouthchoose" id="np" />
+                <input
+                  type="radio"
+                  value={"ntibikorwa"}
+                  onChange={() =>
+                    hundleInputsChange("Mcoopyouthchoose", "ntibikorwa")
+                  }
+                  name="Mcoopyouthchoose"
+                  id="np"
+                />
                 <label htmlFor="np">Ntibikorwa</label>
               </span>
             </p>
             <textarea
               name="Mcoopyouthproof"
               id=""
+              onChange={(e) =>
+                hundleInputsChange("Mcoopyouthproof", e.target.value)
+              }
               cols="3"
               rows="3"
               placeholder="Impamvu / gihamya..."
@@ -433,7 +716,13 @@ const FarmingLure = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button onClick={navigateBack} text={"Previouse"} />
+        <Button
+          onClick={() => {
+            console.log(formDataRule);
+            // navigateBack;
+          }}
+          text={"Previouse"}
+        />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>

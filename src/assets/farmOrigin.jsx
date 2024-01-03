@@ -12,6 +12,13 @@ const FarmOrigin = () => {
     INdocumentkeepchoose: "",
     INharvestscalechoose: "",
     Ppatternerchoose: "",
+    // proofs
+    INharvestareaproof: "",
+    INharvestmanagementproof: "",
+    INharvestsaledocumentproof: "",
+    INdocumentkeepproof: "",
+    INharvestscaleproof: "",
+    Ppatternerproof: "",
   });
 
   const handleRadioChange = (question, value) => {
@@ -96,10 +103,12 @@ const FarmOrigin = () => {
               <textarea
                 name="INharvestareaproof"
                 id=""
+                onChange={(e) =>
+                  handleRadioChange("INharvestareaproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
-                placeholder="Ubuso= …..ha Umusaruro = ………..kgs
-                  "
+                placeholder="Ubuso= …..ha Umusaruro = ………..kgs"
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               ></textarea>
             </div>
@@ -161,6 +170,9 @@ const FarmOrigin = () => {
               <textarea
                 name="INharvestmanagementproof"
                 id=""
+                onChange={(e) =>
+                  handleRadioChange("INharvestmanagementproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -222,6 +234,12 @@ const FarmOrigin = () => {
               <textarea
                 name="INharvestsaledocumentproof"
                 id=""
+                onChange={(e) =>
+                  handleRadioChange(
+                    "INharvestsaledocumentproof",
+                    e.target.value
+                  )
+                }
                 cols="3"
                 rows="3"
                 placeholder="Resi /Receipt? ……Ifishi / Form? …..
@@ -281,6 +299,9 @@ const FarmOrigin = () => {
               <textarea
                 name="INdocumentkeepproof"
                 id=""
+                onChange={(e) =>
+                  handleRadioChange("INdocumentkeepproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -340,6 +361,9 @@ const FarmOrigin = () => {
               <textarea
                 name="INharvestscaleproof"
                 id=""
+                onChange={(e) =>
+                  handleRadioChange("INharvestscaleproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -408,6 +432,9 @@ const FarmOrigin = () => {
             <textarea
               name="Ppatternerproof"
               id=""
+              onChange={(e) =>
+                handleRadioChange("Ppatternerproof", e.target.value)
+              }
               cols="3"
               rows="3"
               placeholder="Igishoro kuri 1kg = ……….. Rwf Inyungu kuri 1kg = …………………"
@@ -419,6 +446,7 @@ const FarmOrigin = () => {
       <div className="flex gap-2 w-[37%] my-5 sm:flex sm:flex-col md:flex md:flex-row lg:flex">
         <Button
           onClick={() => {
+            console.log(formData);
             navigateBack();
           }}
           text={"Previouse"}
