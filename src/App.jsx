@@ -11,6 +11,14 @@ import InspectorForm from "./components/inspectorForm.jsx";
 import Famer from "./components/famer.jsx";
 import FarmOperator from "./assets/farmoperator.jsx";
 import FarmInfo from "./assets/farminfor.jsx";
+import GpsCoordinates from "./assets/dpsCoadinates.jsx";
+import HavestIn4years from "./assets/havestingp4y.jsx";
+import FarmingLure from "./assets/famingLures.jsx";
+import FarmOrigin from "./assets/farmOrigin.jsx";
+import Farming from "./assets/farmingInGeneral.jsx";
+import HealthSafety from "./assets/healthandsafety.jsx";
+import Environment from "./assets/enviroment.jsx";
+import Comfirm from "./assets/confirmation.jsx";
 
 function App() {
   return (
@@ -23,8 +31,16 @@ function App() {
         <Route path="/createaccount" element={<NewInspector />} />
         <Route path="/form" element={<InspectorForm />} />
         <Route path="/farm" element={<Famer />} />
-        <Route path="/farminfor" element={<FarmOperator />} />
-        <Route path="/nextForm" element={<FarmInfo />} />
+        <Route path="/farminfor" element={<FarmInfo />} />
+        <Route path="/operator" element={<FarmOperator />} />
+        <Route path="/gps" element={<GpsCoordinates />} />
+        <Route path="/harvest4" element={<HavestIn4years />} />
+        <Route path="/farmingrule" element={<FarmingLure />} />
+        <Route path="/inheritfarm" element={<FarmOrigin />} />
+        <Route path="/farmingtu" element={<Farming />} />
+        <Route path="/health" element={<HealthSafety />} />
+        <Route path="/enviroment" element={<Environment />} />
+        <Route path="/confirm" element={<Comfirm />} />
       </Routes>
       <Footer />
     </>

@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Button from "./button";
-
+import { useNavigate } from "react-router-dom";
 const AdminDashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex py-5">
       <div className="flex mx-[2rem] justify-between">
@@ -60,20 +61,22 @@ const AdminDashboard = () => {
           {/* Log out */}
           <div className="flex flex-col gap-10 justify-center float-right">
             <Button
-              href="/login"
+              // href="/login"
+              onClick={() => navigate("/login")}
               text="LogOut"
               customCss="bg-[#00a601] text-white border-0 hover:bg-[#638541] py-[1rem]"
             />
 
             {/* Creating new inspector */}
             <Button
-              href="/createaccount"
+              onClick={() => navigate("/createaccount")}
               text="Add inspector"
               customCss="bg-[#00a601] text-white border-0 hover:bg-[#638541] py-[1rem]"
             />
             {/* inspection form */}
             <Button
-              href="/form"
+              onClick={() => navigate("/form")}
+              // href="/form"
               text="New form"
               customCss="bg-[#00a601] text-white border-0 hover:bg-[#638541] py-[1rem]"
             />

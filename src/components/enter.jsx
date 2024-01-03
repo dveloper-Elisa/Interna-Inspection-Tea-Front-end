@@ -11,6 +11,7 @@ const Login = () => {
   const handleInputs = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    history.push("/login/dashboard", { formData });
   };
 
   // Handle form submission on button click
