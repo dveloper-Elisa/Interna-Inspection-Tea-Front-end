@@ -36,10 +36,10 @@ const FarmingLure = () => {
 
   const navigate = useNavigate();
   const navigateFunction = () => {
-    const allDataInfo = Object.values(formDataRule).every(
+    const allFirmRules = Object.values(formDataRule).every(
       (data) => data !== null || data !== ""
     );
-    if (allDataInfo) {
+    if (allFirmRules) {
       navigate("/inheritfarm");
     } else {
       alert("Please fill oll the fields");
@@ -719,7 +719,7 @@ const FarmingLure = () => {
         <Button
           onClick={() => {
             console.log(formDataRule);
-            // navigateBack;
+            navigateBack;
           }}
           text={"Previouse"}
         />

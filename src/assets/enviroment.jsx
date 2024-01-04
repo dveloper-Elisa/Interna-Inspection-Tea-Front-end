@@ -1,7 +1,79 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/button";
+import { useState } from "react";
 
 const Environment = () => {
+  const [environmentData, setEnvironmentData] = useState({
+    Eforestchoose: "",
+    Eforestproof: "",
+    ETstopedchoose: "",
+    ETstopproof: "",
+    EtreeProtectchoose: "",
+    EtreeProtectproof: "",
+    EGnaturalchoose: "",
+    EGnaturalproof: "",
+    EtreePlantchoose: "",
+    EtreePlantproof: "",
+    EtreeShadowchoose: "",
+    EtreeShadowproof: "",
+    Elandexpandchoose: "",
+    Elandexpandproof: "",
+    Elimitchoose: "",
+    Elimitproof: "",
+    Eriparianchoose: "",
+    Eriparianproof: "",
+    Epoachingchoose: "",
+    Epoachingproof: "",
+    EWanimalchoose: "",
+    EWanimalproof: "",
+    ETbigschoose: "",
+    ETbigsproof: "",
+    ETtypechoose: "",
+    ETtypeproof: "",
+    EWanimalWorkchoose: "",
+    EWanimalWorkproof: "",
+    EErosionchoose: "",
+    EErosionproof: "",
+    Eburningchoose: "",
+    Eburningproof: "",
+    EburningReasonchoose: "",
+    EburningReasonproof: "",
+    Ewaterchoose: "",
+    Ewaterproof: "",
+    EwaterPermitchoose: "",
+    EwaterPermitproof: "",
+    Erainwaterchoose: "",
+    Erainwaterproof: "",
+    EriverProtectchoose: "",
+    EriverProtectproof: "",
+    Etoiletmanurechoose: "",
+    Etoiletmanureproof: "",
+    EwaterWasteschoose: "",
+    EwaterWastesproof: "",
+    EwastesBinchoose: "",
+    EwastesBinproof: "",
+    Ewastesburnchoose: "",
+    Ewastesburnproof: "",
+    ECookchoose: "",
+    ECookproof: "",
+    EcookGaschoose: "",
+    EcookGasproof: "",
+    EcookBiogaschoose: "",
+    EcookBiogasproof: "",
+    Esunrayschoose: "",
+    Esunraysproof: "",
+    EgreenHousechoose: "",
+    EgreenHouseproof: "",
+    EgreenHouseRchoose: "",
+    EgreenHouseRproof: "",
+    EgreenHouseFormchoose: "",
+    EgreenHouseFormproof: "",
+  });
+
+  const handleEnvironmentInputs = (environment, value) => {
+    setEnvironmentData({ ...environmentData, [environment]: value });
+  };
+
   const navigate = useNavigate();
   const navigateFunction = () => {
     navigate("/confirm");
@@ -37,21 +109,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Eforestchoose" id="ab" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eforestchoose", "yego")
+                    }
+                    name="Eforestchoose"
+                    id="ab"
+                  />
                   <label htmlFor="ab">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Eforestchoose" id="bb" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eforestchoose", "oya")
+                    }
+                    name="Eforestchoose"
+                    id="bb"
+                  />
                   <label htmlFor="bb">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Eforestchoose" id="cb" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eforestchoose", "ntibikorwa")
+                    }
+                    name="Eforestchoose"
+                    id="cb"
+                  />
                   <label htmlFor="cb">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Eforestproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Eforestproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -70,21 +169,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="ETstopedchoose" id="ac" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETstopedchoose", "yego")
+                    }
+                    name="ETstopedchoose"
+                    id="ac"
+                  />
                   <label htmlFor="ac">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="ETstopedchoose" id="bc" />
-                  <label htmlFor="bb">Oya</label>
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETstopedchoose", "oya")
+                    }
+                    name="ETstopedchoose"
+                    id="bc"
+                  />
+                  <label htmlFor="bc">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="ETstopedchoose" id="cc" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETstopedchoose", "ntibikorwa")
+                    }
+                    name="ETstopedchoose"
+                    id="cc"
+                  />
                   <label htmlFor="cc">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="ETstopproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("ETstopproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Intera hagati y’ingemwe: …………………….."
@@ -105,21 +231,51 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EtreeProtectchoose" id="ad" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EtreeProtectchoose", "yego")
+                    }
+                    name="EtreeProtectchoose"
+                    id="ad"
+                  />
                   <label htmlFor="ad">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EtreeProtectchoose" id="bd" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EtreeProtectchoose", "oya")
+                    }
+                    name="EtreeProtectchoose"
+                    id="bd"
+                  />
                   <label htmlFor="bd">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EtreeProtectchoose" id="cd" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "EtreeProtectchoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="EtreeProtectchoose"
+                    id="cd"
+                  />
                   <label htmlFor="cd">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EtreeProtectproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EtreeProtectproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -140,21 +296,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EGnaturalchoose" id="ae" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EGnaturalchoose", "yego")
+                    }
+                    name="EGnaturalchoose"
+                    id="ae"
+                  />
                   <label htmlFor="ae">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EGnaturalchoose" id="be" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EGnaturalchoose", "oya")
+                    }
+                    name="EGnaturalchoose"
+                    id="be"
+                  />
                   <label htmlFor="be">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EGnaturalchoose" id="ce" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EGnaturalchoose", "ntibikorwa")
+                    }
+                    name="EGnaturalchoose"
+                    id="ce"
+                  />
                   <label htmlFor="ce">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EGnaturalproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EGnaturalproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Aho bigaragara:………………………"
@@ -175,21 +358,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EtreePlantchoose" id="af" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EtreePlantchoose", "yego")
+                    }
+                    name="EtreePlantchoose"
+                    id="af"
+                  />
                   <label htmlFor="af">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EtreePlantchoose" id="bf" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EtreePlantchoose", "oya")
+                    }
+                    name="EtreePlantchoose"
+                    id="bf"
+                  />
                   <label htmlFor="bf">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EtreePlantchoose" id="cf" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EtreePlantchoose", "ntibikorwa")
+                    }
+                    name="EtreePlantchoose"
+                    id="cf"
+                  />
                   <label htmlFor="cf">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EtreePlantproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EtreePlantproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Umubare w’ibiti biri mw’isambu ye:…………………"
@@ -209,21 +419,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EtreeShadowchoose" id="ag" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EtreeShadowchoose", "yego")
+                    }
+                    name="EtreeShadowchoose"
+                    id="ag"
+                  />
                   <label htmlFor="ag">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EtreeShadowchoose" id="bg" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EtreeShadowchoose", "oya")
+                    }
+                    name="EtreeShadowchoose"
+                    id="bg"
+                  />
                   <label htmlFor="bg">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EtreeShadowchoose" id="cg" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EtreeShadowchoose", "ntibikorwa")
+                    }
+                    name="EtreeShadowchoose"
+                    id="cg"
+                  />
                   <label htmlFor="cg">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EtreeShadowproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EtreeShadowproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="...……..%"
@@ -243,21 +480,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Elandexpandchoose" id="ah" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Elandexpandchoose", "yego")
+                    }
+                    name="Elandexpandchoose"
+                    id="ah"
+                  />
                   <label htmlFor="ah">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Elandexpandchoose" id="bh" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Elandexpandchoose", "oya")
+                    }
+                    name="Elandexpandchoose"
+                    id="bh"
+                  />
                   <label htmlFor="bh">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Elandexpandchoose" id="ch" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Elandexpandchoose", "ntibikorwa")
+                    }
+                    name="Elandexpandchoose"
+                    id="ch"
+                  />
                   <label htmlFor="ch">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Elandexpandproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Elandexpandproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -277,21 +541,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Elimitchoose" id="ai" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Elimitchoose", "yego")
+                    }
+                    name="Elimitchoose"
+                    id="ai"
+                  />
                   <label htmlFor="ai">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Elimitchoose" id="bi" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Elimitchoose", "oya")
+                    }
+                    name="Elimitchoose"
+                    id="bi"
+                  />
                   <label htmlFor="bi">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Elimitchoose" id="ci" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Elimitchoose", "ntibikorwa")
+                    }
+                    name="Elimitchoose"
+                    id="ci"
+                  />
                   <label htmlFor="ci">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Elimitproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Elimitproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -312,21 +603,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Eriparianchoose" id="aj" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eriparianchoose", "yego")
+                    }
+                    name="Eriparianchoose"
+                    id="aj"
+                  />
                   <label htmlFor="aj">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Eriparianchoose" id="bj" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eriparianchoose", "oya")
+                    }
+                    name="Eriparianchoose"
+                    id="bj"
+                  />
                   <label htmlFor="bj">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Eriparianchoose" id="cj" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eriparianchoose", "ntibikorwa")
+                    }
+                    name="Eriparianchoose"
+                    id="cj"
+                  />
                   <label htmlFor="cj">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Eriparianproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Eriparianproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Metero zimwo: …………m"
@@ -347,21 +665,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Epoachingchoose" id="ar" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Epoachingchoose", "yego")
+                    }
+                    name="Epoachingchoose"
+                    id="ar"
+                  />
                   <label htmlFor="ar">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Epoachingchoose" id="br" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Epoachingchoose", "oya")
+                    }
+                    name="Epoachingchoose"
+                    id="br"
+                  />
                   <label htmlFor="br">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Epoachingchoose" id="cr" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Epoachingchoose", "ntibikorwa")
+                    }
+                    name="Epoachingchoose"
+                    id="cr"
+                  />
                   <label htmlFor="cr">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Epoachingproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Epoachingproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -382,21 +727,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EWanimalchoose" id="am" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EWanimalchoose", "yego")
+                    }
+                    name="EWanimalchoose"
+                    id="am"
+                  />
                   <label htmlFor="am">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EWanimalchoose" id="bm" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EWanimalchoose", "oya")
+                    }
+                    name="EWanimalchoose"
+                    id="bm"
+                  />
                   <label htmlFor="bm">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EWanimalchoose" id="cm" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EWanimalchoose", "ntibikorwa")
+                    }
+                    name="EWanimalchoose"
+                    id="cm"
+                  />
                   <label htmlFor="cm">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EWanimalproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EWanimalproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -416,21 +788,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="ETbigschoose" id="an" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETbigschoose", "yego")
+                    }
+                    name="ETbigschoose"
+                    id="an"
+                  />
                   <label htmlFor="an">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="ETbigschoose" id="bn" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETbigschoose", "oya")
+                    }
+                    name="ETbigschoose"
+                    id="bn"
+                  />
                   <label htmlFor="bn">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="ETbigschoose" id="cn" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETbigschoose", "ntibikorwa")
+                    }
+                    name="ETbigschoose"
+                    id="cn"
+                  />
                   <label htmlFor="cn">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="ETbigsproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("ETbigsproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -448,21 +847,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="ETtypechoose" id="ao" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETtypechoose", "yego")
+                    }
+                    name="ETtypechoose"
+                    id="ao"
+                  />
                   <label htmlFor="ao">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="ETtypechoose" id="bo" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETtypechoose", "oya")
+                    }
+                    name="ETtypechoose"
+                    id="bo"
+                  />
                   <label htmlFor="bo">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="ETtypechoose" id="co" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ETtypechoose", "ntibikorwa")
+                    }
+                    name="ETtypechoose"
+                    id="co"
+                  />
                   <label htmlFor="co">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="ETtypeproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("ETtypeproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -483,21 +909,51 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EWanimalWorkchoose" id="ap" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EWanimalWorkchoose", "yego")
+                    }
+                    name="EWanimalWorkchoose"
+                    id="ap"
+                  />
                   <label htmlFor="ap">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EWanimalWorkchoose" id="bp" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EWanimalWorkchoose", "oya")
+                    }
+                    name="EWanimalWorkchoose"
+                    id="bp"
+                  />
                   <label htmlFor="bp">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EWanimalWorkchoose" id="cp" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "EWanimalWorkchoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="EWanimalWorkchoose"
+                    id="cp"
+                  />
                   <label htmlFor="cp">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EWanimalWorkproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EWanimalWorkproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -517,21 +973,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EErosionchoose" id="al" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EErosionchoose", "yego")
+                    }
+                    name="EErosionchoose"
+                    id="al"
+                  />
                   <label htmlFor="al">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EErosionchoose" id="bl" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EErosionchoose", "oya")
+                    }
+                    name="EErosionchoose"
+                    id="bl"
+                  />
                   <label htmlFor="bl">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EErosionchoose" id="cl" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EErosionchoose", "ntibikorwa")
+                    }
+                    name="EErosionchoose"
+                    id="cl"
+                  />
                   <label htmlFor="cl">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EErosionproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EErosionproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -552,21 +1035,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Eburningchoose" id="as" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eburningchoose", "yego")
+                    }
+                    name="Eburningchoose"
+                    id="as"
+                  />
                   <label htmlFor="as">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Eburningchoose" id="bs" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eburningchoose", "oya")
+                    }
+                    name="Eburningchoose"
+                    id="bs"
+                  />
                   <label htmlFor="bs">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Eburningchoose" id="cs" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Eburningchoose", "ntibikorwa")
+                    }
+                    name="Eburningchoose"
+                    id="cs"
+                  />
                   <label htmlFor="cs">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Eburningproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Eburningproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -584,21 +1094,51 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EburningReasonchoose" id="at" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EburningReasonchoose", "yego")
+                    }
+                    name="EburningReasonchoose"
+                    id="at"
+                  />
                   <label htmlFor="at">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EburningReasonchoose" id="bt" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EburningReasonchoose", "oya")
+                    }
+                    name="EburningReasonchoose"
+                    id="bt"
+                  />
                   <label htmlFor="bt">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EburningReasonchoose" id="ct" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "EburningReasonchoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="EburningReasonchoose"
+                    id="ct"
+                  />
                   <label htmlFor="ct">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EburningReasonproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EburningReasonproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -619,21 +1159,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Ewaterchoose" id="au" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Ewaterchoose", "yego")
+                    }
+                    name="Ewaterchoose"
+                    id="au"
+                  />
                   <label htmlFor="au">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Ewaterchoose" id="bu" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Ewaterchoose", "oya")
+                    }
+                    name="Ewaterchoose"
+                    id="bu"
+                  />
                   <label htmlFor="bu">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Ewaterchoose" id="cu" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Ewaterchoose", "ntibikorwa")
+                    }
+                    name="Ewaterchoose"
+                    id="cu"
+                  />
                   <label htmlFor="cu">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Ewaterproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Ewaterproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -654,21 +1221,51 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EwaterPermitchoose" id="av" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EwaterPermitchoose", "yego")
+                    }
+                    name="EwaterPermitchoose"
+                    id="av"
+                  />
                   <label htmlFor="av">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EwaterPermitchoose" id="bv" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EwaterPermitchoose", "oya")
+                    }
+                    name="EwaterPermitchoose"
+                    id="bv"
+                  />
                   <label htmlFor="bv">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EwaterPermitchoose" id="cv" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "EwaterPermitchoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="EwaterPermitchoose"
+                    id="cv"
+                  />
                   <label htmlFor="cv">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EwaterPermitproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EwaterPermitproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -689,21 +1286,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Erainwaterchoose" id="aw" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Erainwaterchoose", "yego")
+                    }
+                    name="Erainwaterchoose"
+                    id="aw"
+                  />
                   <label htmlFor="aw">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Erainwaterchoose" id="bw" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Erainwaterchoose", "oya")
+                    }
+                    name="Erainwaterchoose"
+                    id="bw"
+                  />
                   <label htmlFor="bw">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Erainwaterchoose" id="cw" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Erainwaterchoose", "ntibikorwa")
+                    }
+                    name="Erainwaterchoose"
+                    id="cw"
+                  />
                   <label htmlFor="cw">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Erainwaterproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Erainwaterproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -725,21 +1349,51 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EriverProtectchoose" id="ax" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EriverProtectchoose", "yego")
+                    }
+                    name="EriverProtectchoose"
+                    id="ax"
+                  />
                   <label htmlFor="ax">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EriverProtectchoose" id="bx" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EriverProtectchoose", "oya")
+                    }
+                    name="EriverProtectchoose"
+                    id="bx"
+                  />
                   <label htmlFor="bx">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EriverProtectchoose" id="cx" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "EriverProtectchoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="EriverProtectchoose"
+                    id="cx"
+                  />
                   <label htmlFor="cx">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EriverProtectproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EriverProtectproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -759,21 +1413,51 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Etoiletmanurechoose" id="ay" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Etoiletmanurechoose", "yego")
+                    }
+                    name="Etoiletmanurechoose"
+                    id="ay"
+                  />
                   <label htmlFor="ay">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Etoiletmanurechoose" id="by" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Etoiletmanurechoose", "oya")
+                    }
+                    name="Etoiletmanurechoose"
+                    id="by"
+                  />
                   <label htmlFor="by">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Etoiletmanurechoose" id="cy" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "Etoiletmanurechoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="Etoiletmanurechoose"
+                    id="cy"
+                  />
                   <label htmlFor="cy">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Etoiletmanureproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Etoiletmanureproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -794,21 +1478,51 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EwaterWasteschoose" id="very" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EwaterWasteschoose", "yego")
+                    }
+                    name="EwaterWasteschoose"
+                    id="very"
+                  />
                   <label htmlFor="very">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EwaterWasteschoose" id="vroy" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EwaterWasteschoose", "oya")
+                    }
+                    name="EwaterWasteschoose"
+                    id="vroy"
+                  />
                   <label htmlFor="vroy">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EwaterWasteschoose" id="vory" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "EwaterWasteschoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="EwaterWasteschoose"
+                    id="vory"
+                  />
                   <label htmlFor="vory">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EwaterWastesproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EwaterWastesproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -829,21 +1543,54 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EgreenHouseFormchoose" id="crat" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EgreenHouseFormchoose", "yego")
+                    }
+                    name="EgreenHouseFormchoose"
+                    id="crat"
+                  />
                   <label htmlFor="crat">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EgreenHouseFormchoose" id="kik" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EgreenHouseFormchoose", "oya")
+                    }
+                    name="EgreenHouseFormchoose"
+                    id="kik"
+                  />
                   <label htmlFor="kik">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EgreenHouseFormchoose" id="kii" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "EgreenHouseFormchoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="EgreenHouseFormchoose"
+                    id="kii"
+                  />
                   <label htmlFor="kii">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EgreenHouseFormproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs(
+                    "EgreenHouseFormproof",
+                    e.target.value
+                  )
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -861,21 +1608,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EwastesBinchoose" id="vcc" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EwastesBinchoose", "yego")
+                    }
+                    name="EwastesBinchoose"
+                    id="vcc"
+                  />
                   <label htmlFor="vcc">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EwastesBinchoose" id="vbb" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EwastesBinchoose", "oya")
+                    }
+                    name="EwastesBinchoose"
+                    id="vbb"
+                  />
                   <label htmlFor="vbb">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EwastesBinchoose" id="vkk" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EwastesBinchoose", "ntibikorwa")
+                    }
+                    name="EwastesBinchoose"
+                    id="vkk"
+                  />
                   <label htmlFor="vkk">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EwastesBinproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EwastesBinproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -893,21 +1667,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Ewastesburnchoose" id="cbb" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Ewastesburnchoose", "yego")
+                    }
+                    name="Ewastesburnchoose"
+                    id="cbb"
+                  />
                   <label htmlFor="cbb">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Ewastesburnchoose" id="ccc" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Ewastesburnchoose", "yego")
+                    }
+                    name="Ewastesburnchoose"
+                    id="ccc"
+                  />
                   <label htmlFor="ccc">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Ewastesburnchoose" id="cdd" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Ewastesburnchoose", "ntibikorwa")
+                    }
+                    name="Ewastesburnchoose"
+                    id="cdd"
+                  />
                   <label htmlFor="cdd">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Ewastesburnproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Ewastesburnproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -925,21 +1726,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="ECookchoose" id="dvv" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ECookchoose", "yego")
+                    }
+                    name="ECookchoose"
+                    id="dvv"
+                  />
                   <label htmlFor="dvv">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="ECookchoose" id="dcc" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ECookchoose", "oya")
+                    }
+                    name="ECookchoose"
+                    id="dcc"
+                  />
                   <label htmlFor="dcc">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="ECookchoose" id="dbb" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("ECookchoose", "ntibikorwa")
+                    }
+                    name="ECookchoose"
+                    id="dbb"
+                  />
                   <label htmlFor="dbb">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="ECookproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("ECookproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -957,21 +1785,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EcookGaschoose" id="fff" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EcookGaschoose", "yego")
+                    }
+                    name="EcookGaschoose"
+                    id="fff"
+                  />
                   <label htmlFor="fff">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EcookGaschoose" id="fgg" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EcookGaschoose", "oya")
+                    }
+                    name="EcookGaschoose"
+                    id="fgg"
+                  />
                   <label htmlFor="fgg">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EcookGaschoose" id="fdd" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EcookGaschoose", "ntibikorwa")
+                    }
+                    name="EcookGaschoose"
+                    id="fdd"
+                  />
                   <label htmlFor="fdd">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EcookGasproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EcookGasproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -989,21 +1844,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EcookBiogaschoose" id="ggg" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EcookBiogaschoose", "yego")
+                    }
+                    name="EcookBiogaschoose"
+                    id="ggg"
+                  />
                   <label htmlFor="ggg">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EcookBiogaschoose" id="gkk" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EcookBiogaschoose", "oya")
+                    }
+                    name="EcookBiogaschoose"
+                    id="gkk"
+                  />
                   <label htmlFor="gkk">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EcookBiogaschoose" id="gjj" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EcookBiogaschoose", "ntibikorwa")
+                    }
+                    name="EcookBiogaschoose"
+                    id="gjj"
+                  />
                   <label htmlFor="gjj">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EcookBiogasproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EcookBiogasproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -1024,21 +1906,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Esunrayschoose" id="qaa" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Esunrayschoose", "yego")
+                    }
+                    name="Esunrayschoose"
+                    id="qaa"
+                  />
                   <label htmlFor="qaa">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Esunrayschoose" id="qss" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Esunrayschoose", "oya")
+                    }
+                    name="Esunrayschoose"
+                    id="qss"
+                  />
                   <label htmlFor="qss">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Esunrayschoose" id="qvh" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("Esunrayschoose", "ntibikorwa")
+                    }
+                    name="Esunrayschoose"
+                    id="qvh"
+                  />
                   <label htmlFor="qvh">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Esunraysproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("Esunraysproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -1056,21 +1965,48 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EgreenHousechoose" id="ett" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EgreenHousechoose", "yego")
+                    }
+                    name="EgreenHousechoose"
+                    id="ett"
+                  />
                   <label htmlFor="ett">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EgreenHousechoose" id="ahh" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EgreenHousechoose", "oya")
+                    }
+                    name="EgreenHousechoose"
+                    id="ahh"
+                  />
                   <label htmlFor="ahh">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EgreenHousechoose" id="add" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EgreenHousechoose", "ntibikorwa")
+                    }
+                    name="EgreenHousechoose"
+                    id="add"
+                  />
                   <label htmlFor="add">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EgreenHouseproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EgreenHouseproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -1092,21 +2028,51 @@ const Environment = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="EgreenHouseRchoose" id="rhh" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EgreenHouseRchoose", "yego")
+                    }
+                    name="EgreenHouseRchoose"
+                    id="rhh"
+                  />
                   <label htmlFor="rhh">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="EgreenHouseRchoose" id="rgg" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleEnvironmentInputs("EgreenHouseRchoose", "oya")
+                    }
+                    name="EgreenHouseRchoose"
+                    id="rgg"
+                  />
                   <label htmlFor="rgg">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="EgreenHouseRchoose" id="rrr" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleEnvironmentInputs(
+                        "EgreenHouseRchoose",
+                        "ntibikorwa"
+                      )
+                    }
+                    name="EgreenHouseRchoose"
+                    id="rrr"
+                  />
                   <label htmlFor="rrr">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="EgreenHouseRproof"
                 id=""
+                onChange={(e) =>
+                  handleEnvironmentInputs("EgreenHouseRproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -1117,7 +2083,13 @@ const Environment = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button onClick={navigateBack} text={"Previouse"} />
+        <Button
+          onClick={() => {
+            console.log(environmentData);
+            navigateBack;
+          }}
+          text={"Previouse"}
+        />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>
