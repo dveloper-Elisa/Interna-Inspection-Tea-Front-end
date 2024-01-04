@@ -175,7 +175,7 @@ const HealthSafety = () => {
                     name="conviseCMchoose"
                     id="bc"
                   />
-                  <label htmlFor="bb">Oya</label>
+                  <label htmlFor="bc">Oya</label>
                 </span>
                 <span>
                   <input
@@ -1349,22 +1349,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WWcarechoose" id="ay" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("WWcarechoose", "yego")}
+                    name="WWcarechoose"
+                    id="ay"
+                  />
                   <label htmlFor="ay">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WWcarechoose" id="by" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("WWcarechoose", "oya")}
+                    name="WWcarechoose"
+                    id="by"
+                  />
                   <label htmlFor="by">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WWcarechoose" id="cy" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WWcarechoose", "ntibikorwa")
+                    }
+                    name="WWcarechoose"
+                    id="cy"
+                  />
                   <label htmlFor="cy">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WWcareproof"
                 id=""
-                onChange={(e) => handleHealthIsue("", e.target.value)}
+                onChange={(e) =>
+                  handleHealthIsue("WWcareproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -1385,22 +1407,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WAlivechoose" id="ti" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("WAlivechoose", "yego")}
+                    name="WAlivechoose"
+                    id="ti"
+                  />
                   <label htmlFor="ti">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WAlivechoose" id="ro" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("WAlivechoose", "oya")}
+                    name="WAlivechoose"
+                    id="ro"
+                  />
                   <label htmlFor="ro">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WAlivechoose" id="or" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WAlivechoose", "ntibikorwa")
+                    }
+                    name="WAlivechoose"
+                    id="or"
+                  />
                   <label htmlFor="or">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WAliveproof"
                 id=""
-                onChange={(e) => handleHealthIsue("", e.target.value)}
+                onChange={(e) =>
+                  handleHealthIsue("WAliveproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -1421,22 +1465,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WDocsWantchoose" id="tito" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("WDocsWantchoose", "yego")}
+                    name="WDocsWantchoose"
+                    id="tito"
+                  />
                   <label htmlFor="tito">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WDocsWantchoose" id="tik" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("WDocsWantchoose", "oya")}
+                    name="WDocsWantchoose"
+                    id="tik"
+                  />
                   <label htmlFor="tik">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WDocsWantchoose" id="tivk" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WDocsWantchoose", "ntibikorwa")
+                    }
+                    name="WDocsWantchoose"
+                    id="tivk"
+                  />
                   <label htmlFor="tivk">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WDocsWantproof"
                 id=""
-                onChange={(e) => handleHealthIsue("", e.target.value)}
+                onChange={(e) =>
+                  handleHealthIsue("WDocsWantproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -1457,22 +1523,48 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WLandPermitchoose" id="Caffe" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("WLandPermitchoose", "yego")
+                    }
+                    name="WLandPermitchoose"
+                    id="Caffe"
+                  />
                   <label htmlFor="Caffe">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WLandPermitchoose" id="cake" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleHealthIsue("WLandPermitchoose", "oya")
+                    }
+                    name="WLandPermitchoose"
+                    id="cake"
+                  />
                   <label htmlFor="cake">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WLandPermitchoose" id="roud" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WLandPermitchoose", "ntibikorwa")
+                    }
+                    name="WLandPermitchoose"
+                    id="roud"
+                  />
                   <label htmlFor="roud">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WLandPermitproof"
                 id=""
-                onChange={(e) => handleHealthIsue("", e.target.value)}
+                onChange={(e) =>
+                  handleHealthIsue("WLandPermitproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -1483,7 +1575,13 @@ const HealthSafety = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button onClick={navigateBack} text={"Previouse"} />
+        <Button
+          onClick={() => {
+            console.log(healthInformation);
+            navigateBack;
+          }}
+          text={"Previouse"}
+        />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>
