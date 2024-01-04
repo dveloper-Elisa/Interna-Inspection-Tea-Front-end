@@ -26,12 +26,13 @@ const FarmOrigin = () => {
   };
 
   const navigateFunction = () => {
-    const allInputs = Object.values(formData).every((value) => value !== "");
-    if (allInputs) {
-      navigate("/farmingtu");
-    } else {
-      alert("Please answer all questions before continuing!");
-    }
+    navigate("/farmingtu");
+    // const allInputs = Object.values(formData).every((value) => value !== "");
+    // if (allInputs) {
+    //   navigate("/farmingtu");
+    // } else {
+    //   alert("Please answer all questions before continuing!");
+    // }
   };
 
   const navigateBack = () => {
@@ -446,7 +447,7 @@ const FarmOrigin = () => {
       <div className="flex gap-2 w-[37%] my-5 sm:flex sm:flex-col md:flex md:flex-row lg:flex">
         <Button
           onClick={() => {
-            console.log(formData);
+            // console.log(formData);
             navigateBack();
           }}
           text={"Previouse"}

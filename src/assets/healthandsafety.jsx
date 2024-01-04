@@ -1,7 +1,65 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Button from "../components/button";
 
 const HealthSafety = () => {
+  const [healthInformation, setHealthInformation] = useState({
+    workCoopchoose: "",
+    workCoopproof: "",
+    conviseCMchoose: "",
+    conviseCMproof: "",
+    workConvisechoose: "",
+    workConviseproof: "",
+    workPTchoose: "",
+    workPTproof: "",
+    workPayeProcedchoose: "",
+    workPayeProcedproof: "",
+    workPaymentchoose: "",
+    workpayementproof: "",
+    WpaymentReducechoose: "",
+    WpaymentReduceproof: "",
+    WorkListchoose: "",
+    WorkListproof: "",
+    PaymentEquallychoose: "",
+    PaymentEquallyproof: "",
+    WorkerSeacherchoose: "",
+    WorkerSeacherproof: "",
+    W8hrsabovechoose: "",
+    Work8hrsaboveproof: "",
+    WadditionHrschoose: "",
+    WadditionHrsProof: "",
+    WPFchoose: "",
+    WPFproof: "",
+    Wbelow18yschoose: "",
+    Wbelow18ysproof: "",
+    Wsafeboxchoose: "",
+    Wsafeboxproof: "",
+    WfirstAidechoose: "",
+    WfirstAideproof: "",
+    Winsurancechoose: "",
+    Winsuranceproof: "",
+    Wdwaterchoose: "",
+    Wdwaterproof: "",
+    Wtoiletchoose: "",
+    Wtoiletproof: "",
+    WTAavoidchoose: "",
+    WTAavoidproof: "",
+    WweqCaringchoose: "",
+    WweqCaringproof: "",
+    WWcarechoose: "",
+    WWcareproof: "",
+    WAlivechoose: "",
+    WAliveproof: "",
+    WDocsWantchoose: "",
+    WDocsWantproof: "",
+    WLandPermitchoose: "",
+    WLandPermitproof: "",
+  });
+
+  const handleHealthIsue = (health, value) => {
+    setHealthInformation({ ...healthInformation, [health]: value });
+  };
+
   const navigate = useNavigate();
   const navigateFunction = () => {
     navigate("/enviroment");
@@ -40,21 +98,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="workCoopchoose" id="ab" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("workCoopchoose", "yego")}
+                    name="workCoopchoose"
+                    id="ab"
+                  />
                   <label htmlFor="ab">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="workCoopchoose" id="bb" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("workCoopchoose", "oya")}
+                    name="workCoopchoose"
+                    id="bb"
+                  />
                   <label htmlFor="bb">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="workCoopchoose" id="cb" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("workCoopchoose", "ntibikorwa")
+                    }
+                    name="workCoopchoose"
+                    id="cb"
+                  />
                   <label htmlFor="cb">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="workCoopproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("workCoopproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -77,21 +158,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="conviseCMchoose" id="ac" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("conviseCMchoose", "yego")}
+                    name="conviseCMchoose"
+                    id="ac"
+                  />
                   <label htmlFor="ac">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="conviseCMchoose" id="bc" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("conviseCMchoose", "oya")}
+                    name="conviseCMchoose"
+                    id="bc"
+                  />
                   <label htmlFor="bb">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="conviseCMchoose" id="cc" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("conviseCMchoose", "ntibikorwa")
+                    }
+                    name="conviseCMchoose"
+                    id="cc"
+                  />
                   <label htmlFor="cc">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="conviseCMproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("conviseCMproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -113,21 +217,48 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="workConvisechoose" id="ad" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("workConvisechoose", "yego")
+                    }
+                    name="workConvisechoose"
+                    id="ad"
+                  />
                   <label htmlFor="ad">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="workConvisechoose" id="bd" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleHealthIsue("workConvisechoose", "oya")
+                    }
+                    name="workConvisechoose"
+                    id="bd"
+                  />
                   <label htmlFor="bd">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="workConvisechoose" id="cd" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("workConvisechoose", "ntibikorwa")
+                    }
+                    name="workConvisechoose"
+                    id="cd"
+                  />
                   <label htmlFor="cd">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="workConviseproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("workConviseproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -149,21 +280,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="workPTchoose" id="ae" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("workPTchoose", "yego")}
+                    name="workPTchoose"
+                    id="ae"
+                  />
                   <label htmlFor="ae">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="workPTchoose" id="be" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("workPTchoose", "oya")}
+                    name="workPTchoose"
+                    id="be"
+                  />
                   <label htmlFor="be">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="workPTchoose" id="ce" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("workPTchoose", "ntibikorwa")
+                    }
+                    name="workPTchoose"
+                    id="ce"
+                  />
                   <label htmlFor="ce">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="workPTproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("workPTproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -183,21 +337,48 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="workPayeProcedchoose" id="af" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("workPayeProcedchoose", "yego")
+                    }
+                    name="workPayeProcedchoose"
+                    id="af"
+                  />
                   <label htmlFor="af">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="workPayeProcedchoose" id="bf" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleHealthIsue("workPayeProcedchoose", "oya")
+                    }
+                    name="workPayeProcedchoose"
+                    id="bf"
+                  />
                   <label htmlFor="bf">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="workPayeProcedchoose" id="cf" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("workPayeProcedchoose", "ntibikorwa")
+                    }
+                    name="workPayeProcedchoose"
+                    id="cf"
+                  />
                   <label htmlFor="cf">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="workPayeProcedproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("workPayeProcedproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -217,21 +398,48 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="workPaymentchoose" id="ag" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("workPaymentchoose", "yego")
+                    }
+                    name="workPaymentchoose"
+                    id="ag"
+                  />
                   <label htmlFor="ag">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="workPaymentchoose" id="bg" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleHealthIsue("workPaymentchoose", "oya")
+                    }
+                    name="workPaymentchoose"
+                    id="bg"
+                  />
                   <label htmlFor="bg">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="workPaymentchoose" id="cg" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("workPaymentchoose", "ntibikorwa")
+                    }
+                    name="workPaymentchoose"
+                    id="cg"
+                  />
                   <label htmlFor="cg">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="workpayementproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("workpayementproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -253,21 +461,48 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WpaymentReducechoose" id="ah" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("WpaymentReducechoose", "yego")
+                    }
+                    name="WpaymentReducechoose"
+                    id="ah"
+                  />
                   <label htmlFor="ah">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WpaymentReducechoose" id="bh" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleHealthIsue("WpaymentReducechoose", "oya")
+                    }
+                    name="WpaymentReducechoose"
+                    id="bh"
+                  />
                   <label htmlFor="bh">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WpaymentReducechoose" id="ch" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WpaymentReducechoose", "ntibikorwa")
+                    }
+                    name="WpaymentReducechoose"
+                    id="ch"
+                  />
                   <label htmlFor="ch">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WpaymentReduceproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("WpaymentReduceproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -289,21 +524,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WorkListchoose" id="ai" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("WorkListchoose", "yego")}
+                    name="WorkListchoose"
+                    id="ai"
+                  />
                   <label htmlFor="ai">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WorkListchoose" id="bi" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("WorkListchoose", "oya")}
+                    name="WorkListchoose"
+                    id="bi"
+                  />
                   <label htmlFor="bi">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WorkListchoose" id="ci" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WorkListchoose", "ntibikorwa")
+                    }
+                    name="WorkListchoose"
+                    id="ci"
+                  />
                   <label htmlFor="ci">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WorkListproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("WorkListproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -324,21 +582,48 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PaymentEquallychoose" id="aj" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("PaymentEquallychoose", "yego")
+                    }
+                    name="PaymentEquallychoose"
+                    id="aj"
+                  />
                   <label htmlFor="aj">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PaymentEquallychoose" id="bj" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleHealthIsue("PaymentEquallychoose", "oya")
+                    }
+                    name="PaymentEquallychoose"
+                    id="bj"
+                  />
                   <label htmlFor="bj">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PaymentEquallychoose" id="cj" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("PaymentEquallychoose", "ntibikorwa")
+                    }
+                    name="PaymentEquallychoose"
+                    id="cj"
+                  />
                   <label htmlFor="cj">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PaymentEquallyproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("PaymentEquallyproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -358,21 +643,48 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WorkerSeacherchoose" id="ar" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("WorkerSeacherchoose", "yego")
+                    }
+                    name="WorkerSeacherchoose"
+                    id="ar"
+                  />
                   <label htmlFor="ar">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WorkerSeacherchoose" id="br" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleHealthIsue("WorkerSeacherchoose", "oya")
+                    }
+                    name="WorkerSeacherchoose"
+                    id="br"
+                  />
                   <label htmlFor="br">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WorkerSeacherchoose" id="cr" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WorkerSeacherchoose", "ntibikorwa")
+                    }
+                    name="WorkerSeacherchoose"
+                    id="cr"
+                  />
                   <label htmlFor="cr">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WorkerSeacherproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("WorkerSeacherproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -393,21 +705,46 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="W8hrsabovechoose" id="am" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("W8hrsabovechoose", "yego")
+                    }
+                    name="W8hrsabovechoose"
+                    id="am"
+                  />
                   <label htmlFor="am">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="W8hrsabovechoose" id="bm" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("W8hrsabovechoose", "oya")}
+                    name="W8hrsabovechoose"
+                    id="bm"
+                  />
                   <label htmlFor="bm">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="W8hrsabovechoose" id="cm" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("W8hrsabovechoose", "ntibikorwa")
+                    }
+                    name="W8hrsabovechoose"
+                    id="cm"
+                  />
                   <label htmlFor="cm">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Work8hrsaboveproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("Work8hrsaboveproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -428,21 +765,48 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WadditionHrschoose" id="an" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("WadditionHrschoose", "yego")
+                    }
+                    name="WadditionHrschoose"
+                    id="an"
+                  />
                   <label htmlFor="an">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WadditionHrschoose" id="bn" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleHealthIsue("WadditionHrschoose", "oya")
+                    }
+                    name="WadditionHrschoose"
+                    id="bn"
+                  />
                   <label htmlFor="bn">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WadditionHrschoose" id="cn" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WadditionHrschoose", "ntibikorwa")
+                    }
+                    name="WadditionHrschoose"
+                    id="cn"
+                  />
                   <label htmlFor="cn">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WadditionHrsProof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("WadditionHrsProof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -463,21 +827,40 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WPFchoose" id="ao" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("WPFchoose", "yego")}
+                    name="WPFchoose"
+                    id="ao"
+                  />
                   <label htmlFor="ao">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WPFchoose" id="bo" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("WPFchoose", "oya")}
+                    name="WPFchoose"
+                    id="bo"
+                  />
                   <label htmlFor="bo">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WPFchoose" id="co" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() => handleHealthIsue("WPFchoose", "ntibikorwa")}
+                    name="WPFchoose"
+                    id="co"
+                  />
                   <label htmlFor="co">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WPFproof"
                 id=""
+                onChange={(e) => handleHealthIsue("WPFproof", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -498,21 +881,46 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Wbelow18yschoose" id="ap" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("Wbelow18yschoose", "yego")
+                    }
+                    name="Wbelow18yschoose"
+                    id="ap"
+                  />
                   <label htmlFor="ap">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Wbelow18yschoose" id="bp" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("Wbelow18yschoose", "oya")}
+                    name="Wbelow18yschoose"
+                    id="bp"
+                  />
                   <label htmlFor="bp">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Wbelow18yschoose" id="cp" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("Wbelow18yschoose", "ntibikorwa")
+                    }
+                    name="Wbelow18yschoose"
+                    id="cp"
+                  />
                   <label htmlFor="cp">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Wbelow18ysproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("Wbelow18ysproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -533,21 +941,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Wsafeboxchoose" id="al" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("Wsafeboxchoose", "yego")}
+                    name="Wsafeboxchoose"
+                    id="al"
+                  />
                   <label htmlFor="al">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Wsafeboxchoose" id="bl" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("Wsafeboxchoose", "oya")}
+                    name="Wsafeboxchoose"
+                    id="bl"
+                  />
                   <label htmlFor="bl">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Wsafeboxchoose" id="cl" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("Wsafeboxchoose", "ntibikorwa")
+                    }
+                    name="Wsafeboxchoose"
+                    id="cl"
+                  />
                   <label htmlFor="cl">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Wsafeboxproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("Wsafeboxproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -568,21 +999,46 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WfirstAidechoose" id="as" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("WfirstAidechoose", "yego")
+                    }
+                    name="WfirstAidechoose"
+                    id="as"
+                  />
                   <label htmlFor="as">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WfirstAidechoose" id="bs" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("WfirstAidechoose", "oya")}
+                    name="WfirstAidechoose"
+                    id="bs"
+                  />
                   <label htmlFor="bs">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WfirstAidechoose" id="cs" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WfirstAidechoose", "ntibikorwa")
+                    }
+                    name="WfirstAidechoose"
+                    id="cs"
+                  />
                   <label htmlFor="cs">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WfirstAideproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("WfirstAideproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Ikigo nderabuzima kiri hafi:............"
@@ -600,21 +1056,46 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Winsurancechoose" id="at" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("Winsurancechoose", "yego")
+                    }
+                    name="Winsurancechoose"
+                    id="at"
+                  />
                   <label htmlFor="at">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Winsurancechoose" id="bt" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("Winsurancechoose", "oya")}
+                    name="Winsurancechoose"
+                    id="bt"
+                  />
                   <label htmlFor="bt">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Winsurancechoose" id="ct" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("Winsurancechoose", "ntibikorwa")
+                    }
+                    name="Winsurancechoose"
+                    id="ct"
+                  />
                   <label htmlFor="ct">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Winsuranceproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("Winsuranceproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Abatabufite ni bangahe?………….."
@@ -635,21 +1116,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Wdwaterchoose" id="au" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("Wdwaterchoose", "yego")}
+                    name="Wdwaterchoose"
+                    id="au"
+                  />
                   <label htmlFor="au">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Wdwaterchoose" id="bu" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("Wdwaterchoose", "oya")}
+                    name="Wdwaterchoose"
+                    id="bu"
+                  />
                   <label htmlFor="bu">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Wdwaterchoose" id="cu" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("Wdwaterchoose", "ntibikorwa")
+                    }
+                    name="Wdwaterchoose"
+                    id="cu"
+                  />
                   <label htmlFor="cu">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Wdwaterproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("Wdwaterproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -670,21 +1174,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Wtoiletchoose" id="av" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("Wtoiletchoose", "yego")}
+                    name="Wtoiletchoose"
+                    id="av"
+                  />
                   <label htmlFor="av">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Wtoiletchoose" id="bv" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("Wtoiletchoose", "oya")}
+                    name="Wtoiletchoose"
+                    id="bv"
+                  />
                   <label htmlFor="bv">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Wtoiletchoose" id="cv" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("Wtoiletchoose", "ntibikorwa")
+                    }
+                    name="Wtoiletchoose"
+                    id="cv"
+                  />
                   <label htmlFor="cv">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Wtoiletproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("Wtoiletproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -704,21 +1231,44 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WTAavoidchoose" id="aw" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleHealthIsue("WTAavoidchoose", "yego")}
+                    name="WTAavoidchoose"
+                    id="aw"
+                  />
                   <label htmlFor="aw">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WTAavoidchoose" id="bw" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("WTAavoidchoose", "oya")}
+                    name="WTAavoidchoose"
+                    id="bw"
+                  />
                   <label htmlFor="bw">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WTAavoidchoose" id="cw" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WTAavoidchoose", "ntibikorwa")
+                    }
+                    name="WTAavoidchoose"
+                    id="cw"
+                  />
                   <label htmlFor="cw">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WTAavoidproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("WTAavoidproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -739,21 +1289,46 @@ const HealthSafety = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="WweqCaringchoose" id="ax" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleHealthIsue("WweqCaringchoose", "yego")
+                    }
+                    name="WweqCaringchoose"
+                    id="ax"
+                  />
                   <label htmlFor="ax">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="WweqCaringchoose" id="bx" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleHealthIsue("WweqCaringchoose", "oya")}
+                    name="WweqCaringchoose"
+                    id="bx"
+                  />
                   <label htmlFor="bx">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="WweqCaringchoose" id="cx" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleHealthIsue("WweqCaringchoose", "ntibikorwa")
+                    }
+                    name="WweqCaringchoose"
+                    id="cx"
+                  />
                   <label htmlFor="cx">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="WweqCaringproof"
                 id=""
+                onChange={(e) =>
+                  handleHealthIsue("WweqCaringproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -789,6 +1364,7 @@ const HealthSafety = () => {
               <textarea
                 name="WWcareproof"
                 id=""
+                onChange={(e) => handleHealthIsue("", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -824,6 +1400,7 @@ const HealthSafety = () => {
               <textarea
                 name="WAliveproof"
                 id=""
+                onChange={(e) => handleHealthIsue("", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -859,6 +1436,7 @@ const HealthSafety = () => {
               <textarea
                 name="WDocsWantproof"
                 id=""
+                onChange={(e) => handleHealthIsue("", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -894,6 +1472,7 @@ const HealthSafety = () => {
               <textarea
                 name="WLandPermitproof"
                 id=""
+                onChange={(e) => handleHealthIsue("", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder=""
