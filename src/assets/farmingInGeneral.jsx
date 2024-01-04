@@ -1,7 +1,59 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Button from "../components/button";
 
 const Farming = () => {
+  const [farmInformation, setFarmInformation] = useState({
+    Plantingseedschoose: "",
+    Plantingseedsproof: "",
+    Ppspacingchoose: "",
+    Ppspacingproof: "",
+    PTeacutingchoose: "",
+    PTeacutingproof: "",
+    PTReplantchoose: "",
+    PTReplantproof: "",
+    PTeamodifychoose: "",
+    PTeamodifyproof: "",
+    PTeaManurechoose: "",
+    PTeaManureproof: "",
+    PTeaFaterizerdocschoose: "",
+    PTeaFaterizerdocsproof: "",
+    PTeaPrisitechoose: "",
+    PTeaPrisiteproof: "",
+    PTeaTreatmentchoose: "",
+    PTeaTreatmentproof: "",
+    PTraingTreatementchoose: "",
+    PTraingTreatementproof: "",
+    PTreatementPreventionchoose: "",
+    PTreatementPreventionproof: "",
+    PIligalTreatementchoose: "",
+    PIligalTreatementproof: "",
+    Ptreatementprotectionchoose: "",
+    Ptreatementprotectionproof: "",
+    PTTProtectionchoose: "",
+    PTTProtectionproof: "",
+    PTBchoose: "",
+    PTBproof: "",
+    PttreatmentObeychoose: "",
+    PttreatmentObeyproof: "",
+    PRTprotectionchoose: "",
+    PRTprotectionproof: "",
+    Ptreatmentchoose: "",
+    PtreatmentDocsproof: "",
+    PtreatCchoose: "",
+    PtreatCproof: "",
+    PtreatKchoose: "",
+    PtreatKproof: "",
+    PtreatCDocschoose: "",
+    PtreatCDocsproof: "",
+    PharvestPchoose: "",
+    PharvestPproof: "",
+  });
+
+  const handleFarmInputs = (farm, value) => {
+    setFarmInformation({ ...farmInformation, [farm]: value });
+  };
+
   const navigate = useNavigate();
   const navigateFunction = () => {
     navigate("/health");
@@ -39,21 +91,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Plantingseedschoose" id="ab" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("Plantingseedschoose", "yego")
+                    }
+                    name="Plantingseedschoose"
+                    id="ab"
+                  />
                   <label htmlFor="ab">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Plantingseedschoose" id="bb" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("Plantingseedschoose", "oya")
+                    }
+                    name="Plantingseedschoose"
+                    id="bb"
+                  />
                   <label htmlFor="bb">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Plantingseedschoose" id="cb" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("Plantingseedschoose", "ntibikorwa")
+                    }
+                    name="Plantingseedschoose"
+                    id="cb"
+                  />
                   <label htmlFor="cb">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Plantingseedsproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("Plantingseedsproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -75,21 +154,44 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Ppspacingchoose" id="ac" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleFarmInputs("Ppspacingchoose", "yego")}
+                    name="Ppspacingchoose"
+                    id="ac"
+                  />
                   <label htmlFor="ac">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Ppspacingchoose" id="bc" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("Ppspacingchoose", "oya")}
+                    name="Ppspacingchoose"
+                    id="bc"
+                  />
                   <label htmlFor="bb">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Ppspacingchoose" id="cc" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("Ppspacingchoose", "ntibikorwa")
+                    }
+                    name="Ppspacingchoose"
+                    id="cc"
+                  />
                   <label htmlFor="cc">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="Ppspacingproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("Ppspacingproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Intera hagati y’ingemwe: …………………….."
@@ -110,21 +212,46 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTeacutingchoose" id="ad" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTeacutingchoose", "yego")
+                    }
+                    name="PTeacutingchoose"
+                    id="ad"
+                  />
                   <label htmlFor="ad">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeacutingchoose" id="bd" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("PTeacutingchoose", "oya")}
+                    name="PTeacutingchoose"
+                    id="bd"
+                  />
                   <label htmlFor="bd">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeacutingchoose" id="cd" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTeacutingchoose", "ntibikorwa")
+                    }
+                    name="PTeacutingchoose"
+                    id="cd"
+                  />
                   <label htmlFor="cd">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTeacutingproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTeacutingproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -146,21 +273,44 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTReplantchoose" id="ae" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleFarmInputs("PTReplantchoose", "yego")}
+                    name="PTReplantchoose"
+                    id="ae"
+                  />
                   <label htmlFor="ae">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTReplantchoose" id="be" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("PTReplantchoose", "oya")}
+                    name="PTReplantchoose"
+                    id="be"
+                  />
                   <label htmlFor="be">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTReplantchoose" id="ce" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTReplantchoose", "ntibikorwa")
+                    }
+                    name="PTReplantchoose"
+                    id="ce"
+                  />
                   <label htmlFor="ce">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTReplantproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTReplantproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -177,21 +327,46 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTeamodifychoose" id="af" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTeamodifychoose", "yego")
+                    }
+                    name="PTeamodifychoose"
+                    id="af"
+                  />
                   <label htmlFor="af">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeamodifychoose" id="bf" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("PTeamodifychoose", "oya")}
+                    name="PTeamodifychoose"
+                    id="bf"
+                  />
                   <label htmlFor="bf">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeamodifychoose" id="cf" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTeamodifychoose", "ntibikorwa")
+                    }
+                    name="PTeamodifychoose"
+                    id="cf"
+                  />
                   <label htmlFor="cf">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTeamodifyproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTeamodifyproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 className="resize-none border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
@@ -212,20 +387,45 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTeaManurechoose" id="ag" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaManurechoose", "yego")
+                    }
+                    name="PTeaManurechoose"
+                    id="ag"
+                  />
                   <label htmlFor="ag">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeaManurechoose" id="bg" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("PTeaManurechoose", "oya")}
+                    name="PTeaManurechoose"
+                    id="bg"
+                  />
                   <label htmlFor="bg">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeaManurechoose" id="cg" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaManurechoose", "ntibikorwa")
+                    }
+                    name="PTeaManurechoose"
+                    id="cg"
+                  />
                   <label htmlFor="cg">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTeaManureproof"
+                onChange={(e) =>
+                  handleFarmInputs("PTeaManureproof", e.target.value)
+                }
                 id=""
                 cols="3"
                 rows="3"
@@ -247,21 +447,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTeaFaterizerdocschoose" id="ah" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaFaterizerdocschoose", "yego")
+                    }
+                    name="PTeaFaterizerdocschoose"
+                    id="ah"
+                  />
                   <label htmlFor="ah">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeaFaterizerdocschoose" id="bh" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaFaterizerdocschoose", "oya")
+                    }
+                    name="PTeaFaterizerdocschoose"
+                    id="bh"
+                  />
                   <label htmlFor="bh">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeaFaterizerdocschoose" id="ch" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaFaterizerdocschoose", "ntibikorwa")
+                    }
+                    name="PTeaFaterizerdocschoose"
+                    id="ch"
+                  />
                   <label htmlFor="ch">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTeaFaterizerdocsproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTeaFaterizerdocsproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Ibiro bya NPK ku mwaka: …………….."
@@ -284,21 +511,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTeaPrisitechoose" id="ai" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaPrisitechoose", "yego")
+                    }
+                    name="PTeaPrisitechoose"
+                    id="ai"
+                  />
                   <label htmlFor="ai">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeaPrisitechoose" id="bi" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaPrisitechoose", "oya")
+                    }
+                    name="PTeaPrisitechoose"
+                    id="bi"
+                  />
                   <label htmlFor="bi">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeaPrisitechoose" id="ci" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaPrisitechoose", "ntibikorwa")
+                    }
+                    name="PTeaPrisitechoose"
+                    id="ci"
+                  />
                   <label htmlFor="ci">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTeaPrisiteproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTeaPrisiteproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -319,21 +573,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTeaTreatmentchoose" id="aj" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaTreatmentchoose", "yego")
+                    }
+                    name="PTeaTreatmentchoose"
+                    id="aj"
+                  />
                   <label htmlFor="aj">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeaTreatmentchoose" id="bj" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaTreatmentchoose", "oya")
+                    }
+                    name="PTeaTreatmentchoose"
+                    id="bj"
+                  />
                   <label htmlFor="bj">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTeaTreatmentchoose" id="cj" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTeaTreatmentchoose", "ntibikorwa")
+                    }
+                    name="PTeaTreatmentchoose"
+                    id="cj"
+                  />
                   <label htmlFor="cj">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTeaTreatmentproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTeaTreatmentproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -354,21 +635,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTraingTreatementchoose" id="ar" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTraingTreatementchoose", "yego")
+                    }
+                    name="PTraingTreatementchoose"
+                    id="ar"
+                  />
                   <label htmlFor="ar">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTraingTreatementchoose" id="br" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PTraingTreatementchoose", "oya")
+                    }
+                    name="PTraingTreatementchoose"
+                    id="br"
+                  />
                   <label htmlFor="br">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTraingTreatementchoose" id="cr" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTraingTreatementchoose", "ntibikorwa")
+                    }
+                    name="PTraingTreatementchoose"
+                    id="cr"
+                  />
                   <label htmlFor="cr">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTraingTreatementproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTraingTreatementproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Wahuguwe ryari? ............."
@@ -392,6 +700,10 @@ const Farming = () => {
                 <span>
                   <input
                     type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTreatementPreventionchoose", "yego")
+                    }
                     name="PTreatementPreventionchoose"
                     id="am"
                   />
@@ -400,6 +712,10 @@ const Farming = () => {
                 <span>
                   <input
                     type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PTraingTreatementchoose", "oya")
+                    }
                     name="PTreatementPreventionchoose"
                     id="bm"
                   />
@@ -408,6 +724,10 @@ const Farming = () => {
                 <span>
                   <input
                     type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTraingTreatementchoose", "ntibikorwa")
+                    }
                     name="PTreatementPreventionchoose"
                     id="cm"
                   />
@@ -417,6 +737,9 @@ const Farming = () => {
               <textarea
                 name="PTreatementPreventionproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTreatementPrevention", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -437,21 +760,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PIligalTreatementchoose" id="an" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PIligalTreatementchoose", "yego")
+                    }
+                    name="PIligalTreatementchoose"
+                    id="an"
+                  />
                   <label htmlFor="an">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PIligalTreatementchoose" id="bn" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PIligalTreatementchoose", "oya")
+                    }
+                    name="PIligalTreatementchoose"
+                    id="bn"
+                  />
                   <label htmlFor="bn">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PIligalTreatementchoose" id="cn" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PIligalTreatementchoose", "ntibikorwa")
+                    }
+                    name="PIligalTreatementchoose"
+                    id="cn"
+                  />
                   <label htmlFor="cn">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PIligalTreatementproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PIligalTreatementproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -474,6 +824,10 @@ const Farming = () => {
                 <span>
                   <input
                     type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("Ptreatementprotectionchoose", "yego")
+                    }
                     name="Ptreatementprotectionchoose"
                     id="ao"
                   />
@@ -482,6 +836,10 @@ const Farming = () => {
                 <span>
                   <input
                     type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("Ptreatementprotectionchoose", "oya")
+                    }
                     name="Ptreatementprotectionchoose"
                     id="bo"
                   />
@@ -490,6 +848,13 @@ const Farming = () => {
                 <span>
                   <input
                     type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs(
+                        "Ptreatementprotectionchoose",
+                        "ntibikorwa"
+                      )
+                    }
                     name="Ptreatementprotectionchoose"
                     id="co"
                   />
@@ -499,6 +864,9 @@ const Farming = () => {
               <textarea
                 name="Ptreatementprotectionproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("Ptreatementprotectionproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder="Imiti akoresha:........."
@@ -519,21 +887,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTTProtectionchoose" id="ap" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PTTProtectionchoose", "yego")
+                    }
+                    name="PTTProtectionchoose"
+                    id="ap"
+                  />
                   <label htmlFor="ap">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTTProtectionchoose" id="bp" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PTTProtectionchoose", "oya")
+                    }
+                    name="PTTProtectionchoose"
+                    id="bp"
+                  />
                   <label htmlFor="bp">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTTProtectionchoose" id="cp" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PTTProtectionchoose", "ntibikorwa")
+                    }
+                    name="PTTProtectionchoose"
+                    id="cp"
+                  />
                   <label htmlFor="cp">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTTProtectionproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PTTProtectionproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -553,21 +948,40 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PTBchoose" id="al" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleFarmInputs("PTBchoose", "yego")}
+                    name="PTBchoose"
+                    id="al"
+                  />
                   <label htmlFor="al">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTBchoose" id="bl" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("PTBchoose", "oya")}
+                    name="PTBchoose"
+                    id="bl"
+                  />
                   <label htmlFor="bl">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PTBchoose" id="cl" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() => handleFarmInputs("PTBchoose", "ntibikorwa")}
+                    name="PTBchoose"
+                    id="cl"
+                  />
                   <label htmlFor="cl">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PTBproof"
                 id=""
+                onChange={(e) => handleFarmInputs("PTBproof", e.target.value)}
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -587,21 +1001,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PttreatmentObeychoose" id="as" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PttreatmentObeychoose", "yego")
+                    }
+                    name="PttreatmentObeychoose"
+                    id="as"
+                  />
                   <label htmlFor="as">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PttreatmentObeychoose" id="bs" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PttreatmentObeychoose", "oya")
+                    }
+                    name="PttreatmentObeychoose"
+                    id="bs"
+                  />
                   <label htmlFor="bs">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PttreatmentObeychoose" id="cs" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PttreatmentObeychoose", "ntibikorwa")
+                    }
+                    name="PttreatmentObeychoose"
+                    id="cs"
+                  />
                   <label htmlFor="cs">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PttreatmentObeyproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PttreatmentObeyproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -622,21 +1063,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PRTprotectionchoose" id="at" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PRTprotectionchoose", "yego")
+                    }
+                    name="PRTprotectionchoose"
+                    id="at"
+                  />
                   <label htmlFor="at">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PRTprotectionchoose" id="bt" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PRTprotectionchoose", "oya")
+                    }
+                    name="PRTprotectionchoose"
+                    id="bt"
+                  />
                   <label htmlFor="bt">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PRTprotectionchoose" id="ct" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PRTprotectionchoose", "ntibikorwa")
+                    }
+                    name="PRTprotectionchoose"
+                    id="ct"
+                  />
                   <label htmlFor="ct">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PRTprotectionproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PRTprotectionproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -656,21 +1124,46 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="Ptreatmentchoose" id="au" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("Ptreatmentchoose", "yego")
+                    }
+                    name="Ptreatmentchoose"
+                    id="au"
+                  />
                   <label htmlFor="au">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="Ptreatmentchoose" id="bu" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("Ptreatmentchoose", "oya")}
+                    name="Ptreatmentchoose"
+                    id="bu"
+                  />
                   <label htmlFor="bu">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="Ptreatmentchoose" id="cu" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("Ptreatmentchoose", "ntibikorwa")
+                    }
+                    name="Ptreatmentchoose"
+                    id="cu"
+                  />
                   <label htmlFor="cu">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PtreatmentDocsproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PtreatmentDocsproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -691,21 +1184,44 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PtreatCchoose" id="av" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleFarmInputs("PtreatCchoose", "yego")}
+                    name="PtreatCchoose"
+                    id="av"
+                  />
                   <label htmlFor="av">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PtreatCchoose" id="bv" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("PtreatCchoose", "oya")}
+                    name="PtreatCchoose"
+                    id="bv"
+                  />
                   <label htmlFor="bv">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PtreatCchoose" id="cv" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PtreatCchoose", "ntibikorwa")
+                    }
+                    name="PtreatCchoose"
+                    id="cv"
+                  />
                   <label htmlFor="cv">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PtreatCproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PtreatCproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -726,21 +1242,44 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PtreatKchoose" id="aw" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleFarmInputs("PtreatKchoose", "yego")}
+                    name="PtreatKchoose"
+                    id="aw"
+                  />
                   <label htmlFor="aw">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PtreatKchoose" id="bw" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("PtreatKchoose", "oya")}
+                    name="PtreatKchoose"
+                    id="bw"
+                  />
                   <label htmlFor="bw">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PtreatKchoose" id="cw" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PtreatKchoose", "ntibikorwa")
+                    }
+                    name="PtreatKchoose"
+                    id="cw"
+                  />
                   <label htmlFor="cw">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PtreatKproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PtreatKproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -762,21 +1301,48 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PtreatCDocschoose" id="ax" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() =>
+                      handleFarmInputs("PtreatCDocschoose", "yego")
+                    }
+                    name="PtreatCDocschoose"
+                    id="ax"
+                  />
                   <label htmlFor="ax">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PtreatCDocschoose" id="bx" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() =>
+                      handleFarmInputs("PtreatCDocschoose", "oya")
+                    }
+                    name="PtreatCDocschoose"
+                    id="bx"
+                  />
                   <label htmlFor="bx">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PtreatCDocschoose" id="cx" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PtreatCDocschoose", "ntibikorwa")
+                    }
+                    name="PtreatCDocschoose"
+                    id="cx"
+                  />
                   <label htmlFor="cx">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PtreatCDocsproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PtreatCDocsproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -797,21 +1363,44 @@ const Farming = () => {
               </label>
               <p className="flex gap-4 font-bold my-2">
                 <span>
-                  <input type="radio" name="PharvestPchoose" id="ay" />
+                  <input
+                    type="radio"
+                    value={"yego"}
+                    onChange={() => handleFarmInputs("PharvestPchoose", "yego")}
+                    name="PharvestPchoose"
+                    id="ay"
+                  />
                   <label htmlFor="ay">Yego</label>
                 </span>
                 <span>
-                  <input type="radio" name="PharvestPchoose" id="by" />
+                  <input
+                    type="radio"
+                    value={"oya"}
+                    onChange={() => handleFarmInputs("PharvestPchoose", "oya")}
+                    name="PharvestPchoose"
+                    id="by"
+                  />
                   <label htmlFor="by">Oya</label>
                 </span>
                 <span>
-                  <input type="radio" name="PharvestPchoose" id="cy" />
+                  <input
+                    type="radio"
+                    value={"ntibikorwa"}
+                    onChange={() =>
+                      handleFarmInputs("PharvestPchoose", "ntibikorwa")
+                    }
+                    name="PharvestPchoose"
+                    id="cy"
+                  />
                   <label htmlFor="cy">Ntibikorwa</label>
                 </span>
               </p>
               <textarea
                 name="PharvestPproof"
                 id=""
+                onChange={(e) =>
+                  handleFarmInputs("PharvestPproof", e.target.value)
+                }
                 cols="3"
                 rows="3"
                 placeholder=""
@@ -822,7 +1411,13 @@ const Farming = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button onClick={navigateBack} text={"Previouse"} />
+        <Button
+          onClick={() => {
+            console.log(farmInformation);
+            navigateBack;
+          }}
+          text={"Previouse"}
+        />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>
