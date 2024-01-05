@@ -3,18 +3,32 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/button";
 
 const FarmOperator = () => {
+  const [farmOperator, setFarmOperator] = useState({
+    OPname: "",
+    OPNID: "",
+    OPsex: "",
+    OPphone: "",
+    OPdistrict: "",
+    OPsector: "",
+    OPcell: "",
+    OPvillage: "",
+    OPzone: "",
+    OPcooperative: "",
+    OPcoop_member: "",
+    OPlifelong: "",
+  });
+
+  const handleFarmOperator = (operator, value) => {
+    setFarmOperator({ ...farmOperator, [operator]: value });
+  };
+
   const navigate = useNavigate();
 
   const navigateFunction = () => {
     navigate("/farminfor");
   };
   const navigateBack = () => {
-    navigate("/form");
-  };
-
-  const [isOpen, setIsOpen] = useState(false);
-  const toglerBtn = () => {
-    setIsOpen(!isOpen);
+    navigate("/farmer");
   };
 
   return (
@@ -22,13 +36,6 @@ const FarmOperator = () => {
       <strong className="text-[25px]">
         <span>
           2.1.2 AMAKURU Y’UKURICYIRANA UMURIMA (FARM OPERATER) Niba ahari
-          <b
-            id="drop"
-            onClick={toglerBtn}
-            className="hover:cursor-pointer max-w-fit"
-          >
-            ^
-          </b>
         </span>
       </strong>
       {/*1) AMAKURU RUSANGE Y"UKURIKIRANA UMURIMA. */}
@@ -44,6 +51,7 @@ const FarmOperator = () => {
             <input
               type="text"
               id="op"
+              onChange={(e) => handleFarmOperator("OPname", e.target.value)}
               name="OPname"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -59,6 +67,7 @@ const FarmOperator = () => {
               <input
                 type="radio"
                 id="sex"
+                onChange={() => handleFarmOperator("OPsex", "Gabo")}
                 name="OPsex"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
@@ -70,6 +79,7 @@ const FarmOperator = () => {
               <input
                 type="radio"
                 id="s"
+                onChange={() => handleFarmOperator("OPsex", "Gore")}
                 name="OPsex"
                 className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
               />
@@ -86,6 +96,7 @@ const FarmOperator = () => {
             </label>
             <input
               type="number"
+              onChange={(e) => handleFarmOperator("OPphone", e.target.value)}
               name="OPphone"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -98,6 +109,7 @@ const FarmOperator = () => {
             <input
               type="text"
               id="zone"
+              onChange={(e) => handleFarmOperator("OPzone", e.target.value)}
               name="OPzone"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -111,6 +123,9 @@ const FarmOperator = () => {
             <input
               type="text"
               id="COP"
+              onChange={(e) =>
+                handleFarmOperator("OPcooperative", e.target.value)
+              }
               name="OPcooperative"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -125,6 +140,9 @@ const FarmOperator = () => {
             <input
               type="number"
               id="MB"
+              onChange={(e) =>
+                handleFarmOperator("OPcoop_member", e.target.value)
+              }
               name="OPcoop_member"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -139,6 +157,7 @@ const FarmOperator = () => {
             <input
               type="text"
               id="PRD"
+              onChange={(e) => handleFarmOperator("OPlifelong", e.target.value)}
               name="OPlifelong"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -154,6 +173,7 @@ const FarmOperator = () => {
             <input
               type="number"
               id="id"
+              onChange={(e) => handleFarmOperator("OPNID", e.target.value)}
               name="OPNID"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -173,6 +193,7 @@ const FarmOperator = () => {
             <input
               type="text"
               id="DC"
+              onChange={(e) => handleFarmOperator("OPdistrict", e.target.value)}
               name="OPdistrict"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -185,6 +206,7 @@ const FarmOperator = () => {
             <input
               type="text"
               id="ST"
+              onChange={(e) => handleFarmOperator("OPsector", e.target.value)}
               name="OPsector"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -197,6 +219,7 @@ const FarmOperator = () => {
             <input
               type="text"
               id="cell"
+              onChange={(e) => handleFarmOperator("OPcell", e.target.value)}
               name="OPcell"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -209,22 +232,23 @@ const FarmOperator = () => {
             <input
               type="text"
               id="vil"
+              onChange={(e) => handleFarmOperator("OPvillage", e.target.value)}
               name="OPvillage"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
           </div>
         </div>
       </div>
-      <Button
-        // href={handleNavigate}
-        onClick={navigateBack}
-        text={"Previous"}
-      />
-      <Button
-        // href={handleNavigate}
-        onClick={navigateFunction}
-        text={"Next"}
-      />
+      <div className="flex gap-2">
+        <Button
+          onClick={
+            // console.log(farmOperator);
+            navigateBack
+          }
+          text={"Previous"}
+        />
+        <Button onClick={navigateFunction} text={"Next"} />
+      </div>
     </div>
   );
 };

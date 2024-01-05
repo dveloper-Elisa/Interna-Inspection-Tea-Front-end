@@ -1,7 +1,25 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Button from "../components/button";
 
 const FarmInfo = () => {
+  const [farmInformation, setFarmInformation] = useState({
+    FPDI: "",
+    FKODE: "",
+    FUPI: "",
+    Fcell: "",
+    Fvillage: "",
+    Farea: "",
+    Fvarieties: "",
+    FareaGrowedTea: "",
+    FpermanentWork: "",
+    FtemporaryWork: "",
+  });
+
+  const handleFarmInformation = (information, value) => {
+    setFarmInformation({ ...farmInformation, [information]: value });
+  };
+
   const navigate = useNavigate();
 
   const navigateFunction = () => {
@@ -30,6 +48,7 @@ const FarmInfo = () => {
             <input
               type="text"
               id="dpi"
+              onChange={(e) => handleFarmInformation("FPDI", e.target.value)}
               name="FPDI"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -42,6 +61,7 @@ const FarmInfo = () => {
             </label>
             <input
               type="text"
+              onChange={(e) => handleFarmInformation("FKODE", e.target.value)}
               name="FKODE"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -54,6 +74,7 @@ const FarmInfo = () => {
             <input
               type="text"
               id="upi"
+              onChange={(e) => handleFarmInformation("FUPI", e.target.value)}
               name="FUPI"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -68,6 +89,7 @@ const FarmInfo = () => {
             <input
               type="text"
               id="cel"
+              onChange={(e) => handleFarmInformation("Fcell", e.target.value)}
               name="Fcell"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -81,6 +103,9 @@ const FarmInfo = () => {
             <input
               type="text"
               id="vil"
+              onChange={(e) =>
+                handleFarmInformation("Fvillage", e.target.value)
+              }
               name="Fvillage"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -98,6 +123,7 @@ const FarmInfo = () => {
             <input
               type="text"
               id="area"
+              onChange={(e) => handleFarmInformation("Farea", e.target.value)}
               name="Farea"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -111,6 +137,9 @@ const FarmInfo = () => {
             <input
               type="text"
               id="variety"
+              onChange={(e) =>
+                handleFarmInformation("Fvarieties", e.target.value)
+              }
               name="Fvarieties"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -125,6 +154,9 @@ const FarmInfo = () => {
             <input
               type="text"
               id="areg"
+              onChange={(e) =>
+                handleFarmInformation("FareaGrowedTea", e.target.value)
+              }
               name="FareaGrowedTea"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -138,6 +170,9 @@ const FarmInfo = () => {
             <input
               type="text"
               id="pmw"
+              onChange={(e) =>
+                handleFarmInformation("FpermanentWork", e.target.value)
+              }
               name="FpermanentWork"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -151,6 +186,9 @@ const FarmInfo = () => {
             <input
               type="text"
               id="temp"
+              onChange={(e) =>
+                handleFarmInformation("FtemporaryWork", e.target.value)
+              }
               name="FtemporaryWork"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -158,7 +196,13 @@ const FarmInfo = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button onClick={navigateBack} text={"Previouse"} />
+        <Button
+          onClick={
+            // console.log(farmInformation);
+            navigateBack
+          }
+          text={"Previouse"}
+        />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>

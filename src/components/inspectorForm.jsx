@@ -4,14 +4,24 @@ import { useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 const InspectorForm = () => {
+  const [initialForm, setInitialForm] = useState({
+    inspectorName: "",
+    vistedFarmerName: "",
+    dateOfInspection: "",
+    existWhenInspection: "",
+    startingTime: "",
+    endingTime: "",
+    inspectionPlace: "",
+  });
+
+  const handleInitialForm = (initial, value) => {
+    setInitialForm({ ...initialForm, [initial]: value });
+  };
+
   const navigate = useNavigate();
 
   const navigateFunction = () => {
-    navigate("/operator");
-  };
-  const [isOpen, setIsOpen] = useState(false);
-  const toglerBtn = () => {
-    setIsOpen(!isOpen);
+    navigate("/farmer");
   };
   return (
     <div className="flex justify-center items-center image-login ">
@@ -67,11 +77,7 @@ const InspectorForm = () => {
             <div className="flex flex-col gap-4">
               <strong className="text-[25px]">
                 <span className="font-serif text-center border-b-[2px] my-4 shadow-lg hover:cursor-pointer text-[#166534]">
-                  <b
-                    id="drop"
-                    onClick={toglerBtn}
-                    className="hover:cursor-pointer max-w-fit"
-                  >
+                  <b id="drop" className="hover:cursor-pointer max-w-fit">
                     1) AMAKURU RUSANGE K’UBUGENZUZI BW’IMBERE.
                   </b>
                 </span>
@@ -90,6 +96,9 @@ const InspectorForm = () => {
                     <input
                       type="text"
                       id=""
+                      onChange={(e) =>
+                        handleInitialForm("inspectorName", e.target.value)
+                      }
                       name="inspectorName"
                       className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                     />
@@ -102,6 +111,9 @@ const InspectorForm = () => {
                     <input
                       type="text"
                       id=""
+                      onChange={(e) =>
+                        handleInitialForm("vistedFarmerName", e.target.value)
+                      }
                       name="vistedFarmerName"
                       className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                     />
@@ -114,6 +126,9 @@ const InspectorForm = () => {
                     </label>
                     <input
                       type="date"
+                      onChange={(e) =>
+                        handleInitialForm("dateOfInspection", e.target.value)
+                      }
                       name="dateOfInspection"
                       className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                     />
@@ -128,6 +143,9 @@ const InspectorForm = () => {
                     <input
                       type="radio"
                       id="nyi"
+                      onChange={() =>
+                        handleInitialForm("existWhenInspection", "Nyirumurima")
+                      }
                       name="existWhenInspection"
                       className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                     />
@@ -139,6 +157,12 @@ const InspectorForm = () => {
                     <input
                       type="radio"
                       id="si"
+                      onChange={() =>
+                        handleInitialForm(
+                          "existWhenInspection",
+                          "si yirumurima"
+                        )
+                      }
                       name="existWhenInspection"
                       className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                     />
@@ -160,6 +184,9 @@ const InspectorForm = () => {
                         start:
                         <input
                           type="time"
+                          onChange={(e) =>
+                            handleInitialForm("startingTime", e.target.value)
+                          }
                           name="startingTime"
                           className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                         />
@@ -169,6 +196,9 @@ const InspectorForm = () => {
                         END:
                         <input
                           type="time"
+                          onChange={(e) =>
+                            handleInitialForm("endingTime", e.target.value)
+                          }
                           name="endingTime"
                           className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                         />
@@ -185,6 +215,9 @@ const InspectorForm = () => {
                       <input
                         type="radio"
                         id="Y"
+                        onChange={() =>
+                          handleInitialForm("inspectionPlace", "yego")
+                        }
                         name="inspectionPlace"
                         className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                       />
@@ -196,6 +229,9 @@ const InspectorForm = () => {
                       <input
                         type="radio"
                         id="O"
+                        onChange={() =>
+                          handleInitialForm("inspectionPlace", "oya")
+                        }
                         name="inspectionPlace"
                         className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
                       />
@@ -208,15 +244,17 @@ const InspectorForm = () => {
 
                 {/* being used */}
               </div>
-              <Button onClick={navigateFunction} text={"Next"} />
             </div>
             {/* 2.1.1	AMAKURU K’UMUHINZI NYIRIMURIMA (FARM OWNER ) */}
           </div>
-          <Button
-            href="/login/dashboard"
-            text="Dashboard"
-            customCss="bg-[#166534] border-[#166534] text-white  font-bold tracking-[2px] hover:bg-[#fff] hover:text-black float-end mt-[1rem]"
-          />
+          <div className="flex gap-2">
+            <Button onClick={navigateFunction} text={"Next"} />
+            <Button
+              href="/login/dashboard"
+              text="Dashboard"
+              customCss="bg-[#166534] border-[#166534] text-white  font-bold tracking-[2px] hover:bg-[#fff] hover:text-black float-end mt-[1rem]"
+            />
+          </div>
         </div>
       </div>
     </div>

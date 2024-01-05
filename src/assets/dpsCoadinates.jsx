@@ -1,8 +1,19 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import Button from "../components/button";
 
 const GpsCoordinates = () => {
+  const [gpsCoordinates, setGpsCoordinates] = useState({
+    Glatitude: "",
+    Glogitude: "",
+    Galtitude: "",
+  });
+
+  const handleGpsCOordinates = (cordinate, value) => {
+    setGpsCoordinates({ ...gpsCoordinates, [cordinate]: value });
+  };
+
   const navigate = useNavigate();
   const navigateFunction = () => {
     navigate("/harvest4");
@@ -33,6 +44,9 @@ const GpsCoordinates = () => {
             <input
               type="text"
               id="gpl"
+              onChange={(e) =>
+                handleGpsCOordinates("Glatitude", e.target.value)
+              }
               name="Glatitude"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -46,6 +60,9 @@ const GpsCoordinates = () => {
             <input
               type="text"
               id="log"
+              onChange={(e) =>
+                handleGpsCOordinates("Glogitude", e.target.value)
+              }
               name="Glogitude"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -62,6 +79,9 @@ const GpsCoordinates = () => {
             <input
               type="text"
               id="alt"
+              onChange={(e) =>
+                handleGpsCOordinates("Galtitude", e.target.value)
+              }
               name="Galtitude"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -69,7 +89,13 @@ const GpsCoordinates = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button onClick={navigateBack} text={"Previouse"} />
+        <Button
+          onClick={
+            // console.log(gpsCoordinates);
+            navigateBack
+          }
+          text={"Previouse"}
+        />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>

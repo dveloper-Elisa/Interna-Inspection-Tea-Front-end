@@ -1,6 +1,18 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Button from "../components/button";
 const HavestIn4years = () => {
+  const [yearsHarvest, setYearsHarvest] = useState({
+    H2020: "",
+    H2021: "",
+    H2023: "",
+    H2024: "",
+  });
+
+  const handleYearHarvest = (years, value) => {
+    setYearsHarvest({ ...yearsHarvest, [years]: value });
+  };
+
   const navigate = useNavigate();
 
   const navigateFunction = () => {
@@ -28,6 +40,7 @@ const HavestIn4years = () => {
             <input
               type="text"
               id="2020"
+              onChange={(e) => handleYearHarvest("H2020", e.target.value)}
               name="H2020"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -40,6 +53,7 @@ const HavestIn4years = () => {
             <input
               type="text"
               id="2021"
+              onChange={(e) => handleYearHarvest("H2021", e.target.value)}
               name="H2021"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -57,6 +71,7 @@ const HavestIn4years = () => {
             <input
               type="text"
               id="2023"
+              onChange={(e) => handleYearHarvest("H2023", e.target.value)}
               name="H2023"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -70,6 +85,7 @@ const HavestIn4years = () => {
             <input
               type="text"
               id="2024"
+              onChange={(e) => handleYearHarvest("H2024", e.target.value)}
               name="H2024"
               className="border-[#166534] border-[2px] rounded-md focus:border-none px-2 py-1"
             />
@@ -77,7 +93,13 @@ const HavestIn4years = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button onClick={navigateBack} text={"Previouse"} />
+        <Button
+          onClick={
+            // console.log(yearsHarvest);
+            navigateBack
+          }
+          text={"Previouse"}
+        />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>

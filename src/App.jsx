@@ -30,7 +30,7 @@ function App() {
         <Route path="/login/dashboard" element={<AdminDashboard />} />
         <Route path="/createaccount" element={<NewInspector />} />
         <Route path="/form" element={<InspectorForm />} />
-        <Route path="/farm" element={<Famer />} />
+        <Route path="/farmer" element={<Famer />} />
         <Route path="/farminfor" element={<FarmInfo />} />
         <Route path="/operator" element={<FarmOperator />} />
         <Route path="/gps" element={<GpsCoordinates />} />
