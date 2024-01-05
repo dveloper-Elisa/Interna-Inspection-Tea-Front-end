@@ -1,8 +1,43 @@
 import { Link } from "react-router-dom";
 import Button from "./button";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 const AdminDashboard = () => {
+  const [allInspector, setAllInspector] = useState([]);
+
   const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token === "" || !token) {
+      navigate("/login");
+    }
+
+    const displayInspectors = async () => {
+      try {
+        const url = "http://localhost:3000/display/inspectors";
+        await fetch(url, {
+          method: "get",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then((inspect) => inspect.json())
+          .then((inspectors) => {
+            const allInspectors = inspectors.inspector;
+            // console.log(inspectors)
+            // console.log(allInspectors);
+            setAllInspector(allInspectors);
+          })
+          .catch((error) => console.log(error));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    displayInspectors();
+  });
+
   return (
     <div className="flex py-5">
       <div className="flex mx-[2rem] justify-between">
@@ -11,22 +46,16 @@ const AdminDashboard = () => {
             Internal Inspectors.
           </strong>
           <ul className="flex flex-col gap-1 h-[60vh] overflow-y-scroll">
-            <li className="capitalize hover:bg-[#638541] hover:text-white p-2 rounded-md">
-              <Link to="/user"> Kwizera Elisa </Link>
-            </li>
-            <li className="capitalize hover:bg-[#638541] hover:text-white p-2 rounded-md">
-              <Link to="/user"> Ezra Sibomana </Link>
-            </li>
-
-            <li className="capitalize hover:bg-[#638541] hover:text-white p-2 rounded-md">
-              <Link to="/user"> Uwamahoro Peruda </Link>
-            </li>
-            <li className="capitalize hover:bg-[#638541] hover:text-white p-2 rounded-md">
-              <Link to="/user"> Murekatete Ruth </Link>
-            </li>
-            <li className="capitalize hover:bg-[#638541] hover:text-white p-2 rounded-md">
-              <Link to="/user"> Dufitumukiza David </Link>
-            </li>
+            {allInspector.map((inspect) => {
+              return (
+                <li
+                  key={inspect._id}
+                  className="capitalize hover:bg-[#638541] hover:text-white p-2 rounded-md"
+                >
+                  <Link to="/user">{inspect.name}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -62,7 +91,10 @@ const AdminDashboard = () => {
           <div className="flex flex-col gap-10 justify-center float-right">
             <Button
               // href="/login"
-              onClick={() => navigate("/login")}
+              onClick={() => {
+                localStorage.clear();
+                navigate("/login");
+              }}
               text="LogOut"
               customCss="bg-[#00a601] text-white border-0 hover:bg-[#638541] py-[1rem]"
             />

@@ -1,6 +1,12 @@
 import "../../src/index.css";
+import Button from "./button";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/login", { state: "admin" });
+  };
   return (
     <div className="flex flex-col gap-2 p-[2rem] ">
       <div className="flex justify-between gap-20 items-center h-[90vh]  ">
@@ -19,7 +25,11 @@ const Home = () => {
           </p>
         </div>
         <div className="flex">
-          <img src="12.webp" alt="Image here" className="" />
+          <Button
+            onClick={handleLogin} // Handle form submission on button click
+            text="IMS Login"
+            customCss="text-center bg-[#166534] text-white tracking-[2px] font-bold text-[20px] hover:bg-[#fff] hover:border-[#166534] hover:text-black "
+          />
         </div>
       </div>
       <div className="bg-slate-100">

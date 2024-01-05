@@ -1,25 +1,35 @@
 import Button from "./button";
 import Message from "./message";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NewInspector = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token === "" || !token) {
+      navigate("/login");
+    }
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     NID: "",
     phone: "",
+    role: "",
     password: "",
     confirmPassword: "",
   });
 
   const [message, setMessage] = useState();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const handleInputChange = (inspector, value) => {
+    // const value = e.target.value;
+    setFormData({ ...formData, [inspector]: value });
   };
-  const handleClick = () => {
-    // e.preventDefault();
+  const handleClick = (e) => {
+    e.preventDefault();
     if (formData.NID === "") {
       setMessage("Enter ID");
     } else {
@@ -41,15 +51,31 @@ const NewInspector = () => {
       return console.log("email can't be empty");
     }
 
-    useEffect(() => {
-      // Use useEffect to clear the message after 2 seconds
-      const timer = setTimeout(() => {
-        setMessage("");
-      }, 2000);
-
-      return () => clearTimeout(timer); // Clear the timer when component unmounts or changes
-    }, [message]);
-    return console.log(formData);
+    // fetching data
+    try {
+      const registerInternalInspector = async () => {
+        const token = localStorage.getItem("token");
+        if (token === "" || !token) return navigate("/login");
+        const url = "http://localhost:3000/create/inspector";
+        await fetch(url, {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(formData),
+        })
+          .then((data) => data.json())
+          .then((response) => {
+            console.log(response);
+            navigate("/login/dashboard");
+          })
+          .catch((error) => console.log(error));
+      };
+      registerInternalInspector();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -72,22 +98,40 @@ const NewInspector = () => {
                 {message && <Message message={message} />}
               </div>
             </div>
-            <form className="flex flex-col gap-10 ">
+            <form
+              className="flex flex-col gap-10 "
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleClick(e);
+              }}
+            >
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={(e) => handleInputChange("name", e.target.value)}
+                placeholder="Enter full name"
+                className="px-10 py-2 text-[20px] rounded-md"
+              />
               <div className="flex gap-3">
                 <div className="flex flex-col gap-10">
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Enter full name"
+                  <select
+                    name="role"
+                    id=""
+                    value={formData.role}
+                    onChange={(e) => handleInputChange("role", e.target.value)}
                     className="px-10 py-2 text-[20px] rounded-md"
-                  />
+                  >
+                    <option value="">Select role</option>
+                    <option value="IMS">IMS</option>
+                    <option value="Insepector">INTERNAL INSPECTOR</option>
+                  </select>
+
                   <input
                     type="number"
                     name="NID"
                     value={formData.NID}
-                    onChange={handleInputChange}
+                    onChange={(e) => handleInputChange("NID", e.target.value)}
                     placeholder="Enter id"
                     className="px-10 py-2 text-[20px] rounded-md"
                   />
@@ -95,7 +139,7 @@ const NewInspector = () => {
                     type="number"
                     name="phone"
                     value={formData.phone}
-                    onChange={handleInputChange}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
                     placeholder="Phone number"
                     className="px-10 py-2 text-[20px] rounded-md"
                   />
@@ -106,7 +150,7 @@ const NewInspector = () => {
                     type="email"
                     name="email"
                     value={formData.email}
-                    onChange={handleInputChange}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="Enter email"
                     className="px-10 py-2 text-[20px] rounded-md"
                   />
@@ -114,7 +158,9 @@ const NewInspector = () => {
                     type="password"
                     name="password"
                     value={formData.password}
-                    onChange={handleInputChange}
+                    onChange={(e) =>
+                      handleInputChange("password", e.target.value)
+                    }
                     placeholder="Enter password"
                     className="px-10 py-2 text-[20px] rounded-md"
                   />
@@ -122,7 +168,9 @@ const NewInspector = () => {
                     type="password"
                     name="confirmPassword"
                     value={formData.confirmPassword}
-                    onChange={handleInputChange}
+                    onChange={(e) =>
+                      handleInputChange("confirmPassword", e.target.value)
+                    }
                     placeholder="Confirm password"
                     className="px-10 py-2 text-[20px] rounded-md"
                   />
@@ -130,8 +178,11 @@ const NewInspector = () => {
               </div>
 
               <Button
-                onClick={handleClick}
-                // href="/login/dashboard"
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   handleClick(e);
+                //   console.log(formData);
+                // }}
                 text="Register"
                 customCss="text-center bg-[#166534] text-white tracking-[2px] font-bold text-[20px] hover:bg-[#fff] hover:border-[#166534] hover:text-black "
               />

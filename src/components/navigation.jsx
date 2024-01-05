@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "./button";
 
 function Navigation() {
+  const navigate = useNavigate();
+
+  const navigateFunction = () => {
+    navigate("/login");
+  };
+  const navigateHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <div className="bg-[#638541] text-white sticky top-0 z-50">
@@ -15,13 +25,21 @@ function Navigation() {
 
           <nav>
             <div className="flex items-center gap-[20px]">
-              <Button href="/login" text="Login" />
-              <Link
-                to="/"
-                className="hover:text-[#166534] hover:bg-white px-[20px] py-[5px] rounded-lg"
+              <Button
+                onClick={navigateFunction}
+                customCss={
+                  "hover:text-[#166534] hover:bg-white px-[20px] py-[5px] rounded-lg"
+                }
+                text="Login"
+              />
+              <span
+                onClick={navigateHome}
+                className={
+                  "hover:text-[#166534] hover:bg-white hover:cursor-pointer px-[20px] py-[5px] rounded-lg"
+                }
               >
                 Home
-              </Link>
+              </span>
               <Link>
                 <strong>Use Name</strong>
               </Link>

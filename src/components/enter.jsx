@@ -1,17 +1,19 @@
 import "../../src/index.css";
 import Button from "./button.jsx";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Login = () => {
+  const location = useLocation();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
+  const navigate = useNavigate();
   const handleInputs = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    history.push("/login/dashboard", { formData });
   };
 
   // Handle form submission on button click
@@ -19,7 +21,41 @@ const Login = () => {
     if (formData.email === "") {
       return console.log("email is required");
     }
-    console.log(formData);
+    if (formData.password === "") {
+      return console.log("password is required");
+    }
+    // fetching for login
+    try {
+      if (location.state === "admin") {
+        try {
+          const adminLogin = async () => {
+            const url = "http://localhost:3000/admin/login";
+            await fetch(url, {
+              method: "post",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(formData),
+            })
+              .then((data) => data.json())
+              .then((response) => {
+                localStorage.setItem("token", response.accessToken);
+
+                navigate("/login/dashboard");
+                // if (setLocalStorage) {
+                console.log(response.message);
+                // }
+              })
+              .catch((error) => console.log(error));
+          };
+          adminLogin(); // calling functions login
+        } catch (error) {
+          console.log("errro" + " " + error);
+        }
+      } else {
+        console.log("internal Inspector login");
+      }
+    } catch (error) {
+      console.log("Error");
+    }
   };
 
   return (
