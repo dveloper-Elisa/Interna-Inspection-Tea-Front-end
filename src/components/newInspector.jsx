@@ -56,21 +56,41 @@ const NewInspector = () => {
       const registerInternalInspector = async () => {
         const token = localStorage.getItem("token");
         if (token === "" || !token) return navigate("/login");
-        const url = "http://localhost:3000/create/inspector";
-        await fetch(url, {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify(formData),
-        })
-          .then((data) => data.json())
-          .then((response) => {
-            console.log(response);
-            navigate("/login/dashboard");
+
+        if (formData.role === "Inspector") {
+          const url = "http://localhost:3000/create/inspector";
+          await fetch(url, {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify(formData),
           })
-          .catch((error) => console.log(error));
+            .then((data) => data.json())
+            .then((response) => {
+              console.log(response);
+              navigate("/login/dashboard");
+            })
+            .catch((error) => console.log(error));
+        }
+        if (formData.role === "IMS") {
+          const url = "http://localhost:3000/admin/register";
+          await fetch(url, {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((data) => data.json())
+            .then((response) => {
+              console.log(response);
+              navigate("/login/dashboard");
+            })
+            .catch((error) => console.log(error));
+        }
       };
       registerInternalInspector();
     } catch (error) {
@@ -124,7 +144,7 @@ const NewInspector = () => {
                   >
                     <option value="">Select role</option>
                     <option value="IMS">IMS</option>
-                    <option value="Insepector">INTERNAL INSPECTOR</option>
+                    <option value="Inspector">INTERNAL INSPECTOR</option>
                   </select>
 
                   <input

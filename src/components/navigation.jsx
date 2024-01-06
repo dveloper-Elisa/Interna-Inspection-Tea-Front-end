@@ -6,7 +6,7 @@ function Navigation() {
   const navigate = useNavigate();
 
   const navigateFunction = () => {
-    navigate("/login");
+    navigate("/login", { state: "inspector" });
   };
   const navigateHome = () => {
     navigate("/");

@@ -93,7 +93,7 @@ const AdminDashboard = () => {
               // href="/login"
               onClick={() => {
                 localStorage.clear();
-                navigate("/login");
+                navigate("/");
               }}
               text="LogOut"
               customCss="bg-[#00a601] text-white border-0 hover:bg-[#638541] py-[1rem]"

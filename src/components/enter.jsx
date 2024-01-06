@@ -50,9 +50,12 @@ const Login = () => {
         } catch (error) {
           console.log("errro" + " " + error);
         }
-      } else {
-        console.log("internal Inspector login");
       }
+      if (location.state === "inspector") {
+        console.log("internal Inspector login");
+        return;
+      }
+      return console.log("nothing selected");
     } catch (error) {
       console.log("Error");
     }
