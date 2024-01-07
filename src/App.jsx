@@ -19,6 +19,7 @@ import Farming from "./assets/farmingInGeneral.jsx";
 import HealthSafety from "./assets/healthandsafety.jsx";
 import Environment from "./assets/enviroment.jsx";
 import Comfirm from "./assets/confirmation.jsx";
+import InsDashboard from "./components/inspectorDashboard.jsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/login/inspector" element={<InsDashboard />} />
         <Route path="/login/dashboard" element={<AdminDashboard />} />
         <Route path="/createaccount" element={<NewInspector />} />
         <Route path="/form" element={<InspectorForm />} />

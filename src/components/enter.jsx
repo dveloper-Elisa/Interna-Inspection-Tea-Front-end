@@ -52,7 +52,29 @@ const Login = () => {
         }
       }
       if (location.state === "inspector") {
-        console.log("internal Inspector login");
+        try {
+          const adminLogin = async () => {
+            const url = "http://localhost:3000/inspector/login";
+            await fetch(url, {
+              method: "post",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(formData),
+            })
+              .then((data) => data.json())
+              .then((response) => {
+                localStorage.setItem("token", response.accessToken);
+
+                navigate("/login/inspector");
+                // if (setLocalStorage) {
+                console.log(response.message);
+                // }
+              })
+              .catch((error) => console.log(error));
+          };
+          adminLogin(); // calling functions login
+        } catch (error) {
+          console.log("errro" + " " + error);
+        }
         return;
       }
       return console.log("nothing selected");

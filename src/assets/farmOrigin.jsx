@@ -1,11 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Button from "../components/button";
 
 const FarmOrigin = () => {
+  const form7 = useLocation();
   const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
+  const forms7 = form7.state;
+
+  const [formData2, setFormData2] = useState({
     INharvestareachoose: "",
     INharvestmanagementchoose: "",
     INharvestsaledocumentchoose: "",
@@ -22,17 +25,11 @@ const FarmOrigin = () => {
   });
 
   const handleRadioChange = (question, value) => {
-    setFormData({ ...formData, [question]: value });
+    setFormData2({ ...formData2, [question]: value });
   };
 
   const navigateFunction = () => {
-    navigate("/farmingtu");
-    // const allInputs = Object.values(formData).every((value) => value !== "");
-    // if (allInputs) {
-    //   navigate("/farmingtu");
-    // } else {
-    //   alert("Please answer all questions before continuing!");
-    // }
+    navigate("/farmingtu", { state: { forms7, formData2 } });
   };
 
   const navigateBack = () => {
@@ -447,7 +444,7 @@ const FarmOrigin = () => {
       <div className="flex gap-2 w-[37%] my-5 sm:flex sm:flex-col md:flex md:flex-row lg:flex">
         <Button
           onClick={() => {
-            // console.log(formData);
+            // console.log(formData2);
             navigateBack();
           }}
           text={"Previouse"}

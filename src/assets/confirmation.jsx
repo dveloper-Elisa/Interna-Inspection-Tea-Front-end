@@ -1,7 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Button from "../components/button";
 
 const Comfirm = () => {
+  const form11 = useLocation();
+
   const navigate = useNavigate();
   const navigateBack = () => {
     navigate("/enviroment");
@@ -49,7 +51,8 @@ const Comfirm = () => {
         <Button onClick={navigateBack} text={"Previouse"} />
         <Button
           onClick={() => {
-            alert("Submit Button");
+            console.log(form11.state);
+            // alert("Submit Button");
           }}
           text={"Submit"}
         />

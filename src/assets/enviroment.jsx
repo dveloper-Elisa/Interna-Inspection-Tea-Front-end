@@ -1,8 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Button from "../components/button";
 import { useState } from "react";
 
 const Environment = () => {
+  const form10 = useLocation();
+
   const [environmentData, setEnvironmentData] = useState({
     Eforestchoose: "",
     Eforestproof: "",
@@ -75,8 +77,9 @@ const Environment = () => {
   };
 
   const navigate = useNavigate();
+  const forms10 = form10.state;
   const navigateFunction = () => {
-    navigate("/confirm");
+    navigate("/confirm", { state: { forms10, environmentData } });
   };
 
   const navigateBack = () => {

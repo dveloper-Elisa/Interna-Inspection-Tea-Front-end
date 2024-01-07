@@ -1,8 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Button from "../components/button";
 
 const HealthSafety = () => {
+  const form9 = useLocation();
+
   const [healthInformation, setHealthInformation] = useState({
     workCoopchoose: "",
     workCoopproof: "",
@@ -61,8 +63,9 @@ const HealthSafety = () => {
   };
 
   const navigate = useNavigate();
+  const forms9 = form9.state;
   const navigateFunction = () => {
-    navigate("/enviroment");
+    navigate("/enviroment", { state: { forms9, healthInformation } });
   };
 
   const navigateBack = () => {

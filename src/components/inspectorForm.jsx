@@ -21,7 +21,7 @@ const InspectorForm = () => {
   const navigate = useNavigate();
 
   const navigateFunction = () => {
-    navigate("/farmer");
+    navigate("/farmer", { state: initialForm });
   };
   return (
     <div className="flex justify-center items-center image-login ">

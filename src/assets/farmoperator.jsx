@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Button from "../components/button";
 
 const FarmOperator = () => {
+  const form2 = useLocation();
   const [farmOperator, setFarmOperator] = useState({
     OPname: "",
     OPNID: "",
@@ -23,9 +24,11 @@ const FarmOperator = () => {
   };
 
   const navigate = useNavigate();
+  // form1, farmerInformation
+  const forms2 = form2.state;
 
   const navigateFunction = () => {
-    navigate("/farminfor");
+    navigate("/farminfor", { state: { forms2, farmOperator } });
   };
   const navigateBack = () => {
     navigate("/farmer");

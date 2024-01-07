@@ -1,8 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Button from "../components/button";
 
 const Farming = () => {
+  const form8 = useLocation();
   const [farmInformation, setFarmInformation] = useState({
     Plantingseedschoose: "",
     Plantingseedsproof: "",
@@ -55,8 +56,9 @@ const Farming = () => {
   };
 
   const navigate = useNavigate();
+  const forms8 = form8.state;
   const navigateFunction = () => {
-    navigate("/health");
+    navigate("/health", { state: { forms8, farmInformation } });
   };
 
   const navigateBack = () => {

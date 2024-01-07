@@ -1,9 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 import Button from "../components/button";
 
 const GpsCoordinates = () => {
+  const form4 = useLocation();
+
   const [gpsCoordinates, setGpsCoordinates] = useState({
     Glatitude: "",
     Glogitude: "",
@@ -15,8 +17,9 @@ const GpsCoordinates = () => {
   };
 
   const navigate = useNavigate();
+  const forms4 = form4.state;
   const navigateFunction = () => {
-    navigate("/harvest4");
+    navigate("/harvest4", { state: { forms4, gpsCoordinates } });
   };
 
   const navigateBack = () => {

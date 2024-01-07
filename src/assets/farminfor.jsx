@@ -1,8 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Button from "../components/button";
 
 const FarmInfo = () => {
+  const form3 = useLocation();
+
   const [farmInformation, setFarmInformation] = useState({
     FPDI: "",
     FKODE: "",
@@ -21,9 +23,9 @@ const FarmInfo = () => {
   };
 
   const navigate = useNavigate();
-
+  const forms3 = form3.state;
   const navigateFunction = () => {
-    navigate("/gps");
+    navigate("/gps", { state: { forms3, farmInformation } });
   };
 
   const navigateBack = () => {

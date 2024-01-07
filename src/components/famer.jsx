@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 import Button from "./button";
+
 const Famer = () => {
+  const dataFromFirstForm = useLocation();
   const [farmerInformation, setFarmerInformation] = useState({
     name: "",
     NID: "",
@@ -23,12 +26,16 @@ const Famer = () => {
   };
 
   const navigation = useNavigate();
+  // geting data from form 1
+  const form1 = dataFromFirstForm.state;
 
   const navigateBack = () => {
     navigation("/form");
   };
   const navigateFunction = () => {
-    navigation("/operator");
+    navigation("/operator", {
+      state: { form1, farmerInformation },
+    });
   };
 
   return (

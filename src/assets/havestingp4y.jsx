@@ -1,7 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Button from "../components/button";
 const HavestIn4years = () => {
+  const form5 = useLocation();
+
   const [yearsHarvest, setYearsHarvest] = useState({
     H2020: "",
     H2021: "",
@@ -14,9 +16,9 @@ const HavestIn4years = () => {
   };
 
   const navigate = useNavigate();
-
+  const forms5 = form5.state;
   const navigateFunction = () => {
-    navigate("/farmingrule");
+    navigate("/farmingrule", { state: { forms5, yearsHarvest } });
   };
 
   const navigateBack = () => {

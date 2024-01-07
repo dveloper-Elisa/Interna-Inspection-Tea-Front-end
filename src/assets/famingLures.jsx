@@ -1,8 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Button from "../components/button";
 
 const FarmingLure = () => {
+  const form6 = useLocation();
+
   const [formDataRule, setFormDataRule] = useState({
     Mchoose: "",
     Mproof: "",
@@ -35,12 +37,13 @@ const FarmingLure = () => {
   };
 
   const navigate = useNavigate();
+  const forms6 = form6.state;
   const navigateFunction = () => {
     const allFirmRules = Object.values(formDataRule).every(
       (data) => data !== null || data !== ""
     );
     if (allFirmRules) {
-      navigate("/inheritfarm");
+      navigate("/inheritfarm", { state: { forms6, formDataRule } });
     } else {
       alert("Please fill oll the fields");
     }
