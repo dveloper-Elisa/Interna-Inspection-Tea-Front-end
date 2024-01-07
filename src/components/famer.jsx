@@ -4,8 +4,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Button from "./button";
 
 const Famer = () => {
-  const dataFromFirstForm = useLocation();
-  const [farmerInformation, setFarmerInformation] = useState({
+  const form1 = useLocation();
+
+  const [farmerInfo, setFarmerInformation] = useState({
     name: "",
     NID: "",
     farmerCode: "",
@@ -22,19 +23,20 @@ const Famer = () => {
   });
 
   const handleFarmerInformation = (farmer, value) => {
-    setFarmerInformation({ ...farmerInformation, [farmer]: value });
+    setFarmerInformation({ ...farmerInfo, [farmer]: value });
   };
 
   const navigation = useNavigate();
+  const forms1 = form1.state;
   // geting data from form 1
-  const form1 = dataFromFirstForm.state;
+  // const infoInternal = dataFromFirstForm.state;
 
   const navigateBack = () => {
     navigation("/form");
   };
   const navigateFunction = () => {
     navigation("/operator", {
-      state: { form1, farmerInformation },
+      state: { forms1, farmerInfo },
     });
   };
 

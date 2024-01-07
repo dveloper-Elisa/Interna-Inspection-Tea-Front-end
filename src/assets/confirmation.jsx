@@ -1,8 +1,17 @@
 import { useNavigate, useLocation } from "react-router-dom";
+import { useState } from "react";
 import Button from "../components/button";
 
 const Comfirm = () => {
   const form11 = useLocation();
+
+  const [comfirm, setComfirm] = useState({
+    check: "",
+  });
+
+  const cofirmFuncton = (name, value) => {
+    setComfirm({ ...comfirm, [name]: value });
+  };
 
   const navigate = useNavigate();
   const navigateBack = () => {
@@ -27,11 +36,21 @@ const Comfirm = () => {
         <div className="font-bold flex flex-col">
           <strong>Byakozwe neza muri uyumwaka</strong>
           <span>
-            <input type="radio" id="byemewe" name="check" />{" "}
+            <input
+              type="radio"
+              onChange={() => cofirmFuncton("ckeck", "Byemewe")}
+              id="byemewe"
+              name="check"
+            />
             <label htmlFor="byemewe">Byemewe</label>
           </span>
           <span>
-            <input type="radio" id="ntibyemewe" name="check" />{" "}
+            <input
+              type="radio"
+              onChange={() => cofirmFuncton("ckeck", "Ntibemewe")}
+              id="ntibyemewe"
+              name="check"
+            />
             <label htmlFor="ntibyemewe">Ntibyemewe</label>
           </span>
         </div>
@@ -51,8 +70,88 @@ const Comfirm = () => {
         <Button onClick={navigateBack} text={"Previouse"} />
         <Button
           onClick={() => {
-            console.log(form11.state);
-            // alert("Submit Button");
+            const data = form11.state;
+            const inspectionData = { data, comfirm };
+            console.log(inspectionData);
+
+            // //////////////////////////////////////////
+
+            const infoInternal =
+              inspectionData.data.forms10.forms9.forms8.forms7.forms6.forms5
+                .forms4.forms3.forms2.forms1.initialForm;
+            const farmerInfo =
+              inspectionData.data.forms10.forms9.forms8.forms7.forms6.forms5
+                .forms4.forms3.forms2.farmerInfo;
+            const farmeOperator =
+              inspectionData.data.forms10.forms9.forms8.forms7.forms6.forms5
+                .forms4.forms3.farmOperator;
+            const farmInfomation =
+              inspectionData.data.forms10.forms9.forms8.forms7.forms6.forms5
+                .forms4.farmInformation;
+            const farmGPSLocation =
+              inspectionData.data.forms10.forms9.forms8.forms7.forms6.forms5
+                .gpsCoordinates;
+            const harvesting4Years =
+              inspectionData.data.forms10.forms9.forms8.forms7.forms6
+                .yearsHarvest;
+            const farmManagement =
+              inspectionData.data.forms10.forms9.forms8.forms7.formDataRule;
+            const originInformation =
+              inspectionData.data.forms10.forms9.forms8.formData2;
+            const farmingOnly =
+              inspectionData.data.forms10.forms9.farmInformation;
+            const workHealth = inspectionData.data.forms10.healthInformation;
+            const environment = inspectionData.data.environmentData;
+
+            const form_data = {
+              infoInternal,
+              farmerInfo,
+              farmeOperator,
+              farmInfomation,
+              farmGPSLocation,
+              harvesting4Years,
+              farmManagement,
+              originInformation,
+              farmingOnly,
+              workHealth,
+              environment,
+            };
+
+            // // ////////////////////////////////////////////
+
+            try {
+              const fetchInspection = async () => {
+                const token = localStorage.getItem("token");
+
+                if (
+                  token === "" ||
+                  token === undefined ||
+                  token === null ||
+                  !token
+                ) {
+                  location.href = "/";
+                  return;
+                }
+
+                const url = "http://localhost:3000/inspect/inspection";
+                const result = await fetch(url, {
+                  method: "post",
+                  headers: {
+                    "Content-Type": "apllication/json",
+                    Authorization: `Bearer ${token}`,
+                  },
+                  body: JSON.stringify(form_data),
+                });
+
+                const inspection = result.json();
+                console.log(inspection);
+              };
+              fetchInspection();
+            } catch (error) {
+              console.log(error);
+            }
+
+            console.log(form_data);
           }}
           text={"Submit"}
         />

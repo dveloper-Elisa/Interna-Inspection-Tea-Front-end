@@ -1578,13 +1578,7 @@ const HealthSafety = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button
-          onClick={() => {
-            console.log(healthInformation);
-            navigateBack;
-          }}
-          text={"Previouse"}
-        />
+        <Button onClick={() => console.log(forms9)} text={"Previouse"} />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>

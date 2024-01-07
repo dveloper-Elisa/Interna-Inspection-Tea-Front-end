@@ -1413,13 +1413,7 @@ const Farming = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <Button
-          onClick={() => {
-            console.log(farmInformation);
-            navigateBack;
-          }}
-          text={"Previouse"}
-        />
+        <Button onClick={navigateBack} text={"Previouse"} />
         <Button onClick={navigateFunction} text={"Next"} />
       </div>
     </div>

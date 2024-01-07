@@ -39,14 +39,14 @@ const FarmingLure = () => {
   const navigate = useNavigate();
   const forms6 = form6.state;
   const navigateFunction = () => {
-    const allFirmRules = Object.values(formDataRule).every(
-      (data) => data !== null || data !== ""
-    );
-    if (allFirmRules) {
-      navigate("/inheritfarm", { state: { forms6, formDataRule } });
-    } else {
-      alert("Please fill oll the fields");
-    }
+    // const allFirmRules = Object.values(formDataRule).every(
+    //   (data) => data !== null || data !== ""
+    // );
+    // if (allFirmRules) {
+    navigate("/inheritfarm", { state: { forms6, formDataRule } });
+    // } else {
+    //   alert("Please fill oll the fields");
+    // }
   };
 
   const navigateBack = () => {

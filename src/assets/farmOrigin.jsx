@@ -4,9 +4,6 @@ import Button from "../components/button";
 
 const FarmOrigin = () => {
   const form7 = useLocation();
-  const navigate = useNavigate();
-
-  const forms7 = form7.state;
 
   const [formData2, setFormData2] = useState({
     INharvestareachoose: "",
@@ -27,6 +24,10 @@ const FarmOrigin = () => {
   const handleRadioChange = (question, value) => {
     setFormData2({ ...formData2, [question]: value });
   };
+
+  const navigate = useNavigate();
+
+  const forms7 = form7.state;
 
   const navigateFunction = () => {
     navigate("/farmingtu", { state: { forms7, formData2 } });
@@ -443,10 +444,10 @@ const FarmOrigin = () => {
       </div>
       <div className="flex gap-2 w-[37%] my-5 sm:flex sm:flex-col md:flex md:flex-row lg:flex">
         <Button
-          onClick={() => {
+          onClick={
             // console.log(formData2);
-            navigateBack();
-          }}
+            navigateBack
+          }
           text={"Previouse"}
         />
         <Button onClick={navigateFunction} text={"Next"} />
